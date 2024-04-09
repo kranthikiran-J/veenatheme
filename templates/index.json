@@ -656,16 +656,17 @@
         "custom_block_G8JPKF": {
           "type": "custom-block",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Rectangle_4264_1.webp",
-            "image_mobile": "shopify:\/\/shop_images\/Rectangle_4264_1.webp",
-            "pre_heading": "Women's",
-            "title": "<h3>Women's Clothing Collection<\/h3>",
-            "button_label": "Explore",
+            "image_desktop": "shopify:\/\/shop_images\/banner-content-img_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/4_0d5cc573-820a-4e7b-8f22-af8438216522.png",
+            "pre_heading": "Introduce",
+            "title": "<h3>We Believe in the Power of Fashion<\/h3>",
+            "button_label": "Show More",
             "button_link": ""
           }
         },
         "custom_block_AEz6P9": {
           "type": "custom-block",
+          "disabled": true,
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/Rectangle_4265.webp",
             "image_mobile": "shopify:\/\/shop_images\/Rectangle_4265.webp",
