@@ -33,7 +33,7 @@
 }
 .first-section-block--content div p{
     padding: 0 20px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     border-radius: 20px;
     color: white;
     margin: 0;
