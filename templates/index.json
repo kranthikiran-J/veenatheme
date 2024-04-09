@@ -660,6 +660,7 @@
             "image_mobile": "shopify:\/\/shop_images\/4_0d5cc573-820a-4e7b-8f22-af8438216522.png",
             "pre_heading": "Introduce",
             "title": "<h3>We Believe in the Power of Fashion<\/h3>",
+            "description": "<p>fashion emerges as the universal language that speaks volumes without words.<\/p>",
             "button_label": "Show More",
             "button_link": ""
           }
@@ -672,6 +673,7 @@
             "image_mobile": "shopify:\/\/shop_images\/Rectangle_4265.webp",
             "pre_heading": "Fashion",
             "title": "<h3>Women's Sustainable Style Hub<\/h3>",
+            "description": "<p>Business Formal Choices<\/p>",
             "button_label": "Explore",
             "button_link": ""
           }
