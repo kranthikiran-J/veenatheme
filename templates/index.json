@@ -649,6 +649,40 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "bottom_banner_bzRPWr": {
+      "type": "bottom-banner",
+      "blocks": {
+        "custom_block_G8JPKF": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Rectangle_4264_1.webp",
+            "image_mobile": "shopify:\/\/shop_images\/Rectangle_4264_1.webp",
+            "pre_heading": "Women's",
+            "title": "<h3>Women's Clothing Collection<\/h3>",
+            "button_label": "Explore",
+            "button_link": ""
+          }
+        },
+        "custom_block_AEz6P9": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Rectangle_4265.webp",
+            "image_mobile": "shopify:\/\/shop_images\/Rectangle_4265.webp",
+            "pre_heading": "Fashion",
+            "title": "<h3>Women's Sustainable Style Hub<\/h3>",
+            "button_label": "Explore",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_G8JPKF",
+        "custom_block_AEz6P9"
+      ],
+      "settings": {
+        "heading": "Business Formal Choices"
+      }
     }
   },
   "order": [
@@ -665,6 +699,7 @@
     "image_banner_93WaxV",
     "featured_blog_V4YeAM",
     "featured_blog_hxF6Bn",
-    "collapsible_content_Vhc64a"
+    "collapsible_content_Vhc64a",
+    "bottom_banner_bzRPWr"
   ]
 }
