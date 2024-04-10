@@ -1,15 +1,21 @@
 @import url(https://db.onlinewebfonts.com/c/05d9d01becf3f54147f00db19127aa76?family=One+Night+Sans+Black);
+.history-section--title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .history-section--title{
     font-family: "One Night Sans";
     font-weight: 500;
     font-size: 16px;
     text-align: center;
-    width: 150px;
+    width: 180px;
     height: auto;
     border-radius: 15px;
     background-color: #005BAA;
     color: #fff;
-    padding: 5px;
+    padding: 20px;
     
 }
 /* .history-section--desktop{
@@ -24,10 +30,19 @@
     width: 200px;
     height: 200px;
 } */
+.history-section--image-display-container{
+ 
+    border: 1px solid #005BAA;
+    width: 93%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 18px;
+}
 .history-section--image-container{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+
 }
 .history-section--block .history-section--image-text-container .history-section--text{
     font-size: 12px;
