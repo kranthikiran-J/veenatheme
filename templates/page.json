@@ -6,9 +6,82 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "history_of_durex_Ez9Bq8": {
+      "type": "history-of-durex",
+      "blocks": {
+        "custom_block_rYDbVP": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002347.png"
+          }
+        },
+        "custom_block_txnzzk": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004846.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002348.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        },
+        "custom_block_NkajVw": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002349.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        },
+        "custom_block_RAGLwp": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Group_1000002364_3.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002350.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        },
+        "custom_block_bcHX3D": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845_2.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002352.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        },
+        "custom_block_w3rDGL": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004846_2.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002352.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        },
+        "custom_block_EewhUj": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845_3.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002353.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_rYDbVP",
+        "custom_block_txnzzk",
+        "custom_block_NkajVw",
+        "custom_block_RAGLwp",
+        "custom_block_bcHX3D",
+        "custom_block_w3rDGL",
+        "custom_block_EewhUj"
+      ],
+      "settings": {
+        "heading": "History of Durex"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "history_of_durex_Ez9Bq8"
   ]
 }

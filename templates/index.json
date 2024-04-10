@@ -686,6 +686,34 @@
       "settings": {
         "heading": "Business Formal Choices"
       }
+    },
+    "history_of_durex_A8qeVU": {
+      "type": "history-of-durex",
+      "blocks": {
+        "custom_block_Ae8w6c": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002347.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        },
+        "custom_block_UPfVtM": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004846.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002348.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_Ae8w6c",
+        "custom_block_UPfVtM"
+      ],
+      "settings": {
+        "heading": "History of Durex"
+      }
     }
   },
   "order": [
@@ -703,6 +731,7 @@
     "featured_blog_V4YeAM",
     "featured_blog_hxF6Bn",
     "collapsible_content_Vhc64a",
-    "bottom_banner_bzRPWr"
+    "bottom_banner_bzRPWr",
+    "history_of_durex_A8qeVU"
   ]
 }
