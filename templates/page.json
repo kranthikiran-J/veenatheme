@@ -6,9 +6,37 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "history_of_durex_Ez9Bq8": {
+      "type": "history-of-durex",
+      "blocks": {
+        "custom_block_rYDbVP": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002347.png"
+          }
+        },
+        "custom_block_txnzzk": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004846.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002348.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_rYDbVP",
+        "custom_block_txnzzk"
+      ],
+      "settings": {
+        "heading": "History of Durex"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "history_of_durex_Ez9Bq8"
   ]
 }
