@@ -24,7 +24,6 @@
             "image_mobile": "shopify:\/\/shop_images\/Group_1000002348.png",
             "image_line": "shopify:\/\/shop_images\/Line_42.png"
           }
-<<<<<<< HEAD
         },
         "custom_block_NkajVw": {
           "type": "custom-block",
@@ -65,22 +64,16 @@
             "image_mobile": "shopify:\/\/shop_images\/Group_1000002353.png",
             "image_line": "shopify:\/\/shop_images\/Line_42.png"
           }
-=======
->>>>>>> 79be93b2ce845fbbe36b6024d9580bc3398980a0
         }
       },
       "block_order": [
         "custom_block_rYDbVP",
-<<<<<<< HEAD
         "custom_block_txnzzk",
         "custom_block_NkajVw",
         "custom_block_RAGLwp",
         "custom_block_bcHX3D",
         "custom_block_w3rDGL",
         "custom_block_EewhUj"
-=======
-        "custom_block_txnzzk"
->>>>>>> 79be93b2ce845fbbe36b6024d9580bc3398980a0
       ],
       "settings": {
         "heading": "History of Durex"
