@@ -18,18 +18,6 @@
     padding: 20px;
     
 }
-/* .history-section--desktop{
-    width: 100px;
-    height: 200px;
-}
-.history-section--line{
-    width: 100px;
-    height: 10px;
-}
-.history-section--year{
-    width: 200px;
-    height: 200px;
-} */
 .history-section--image-display-container{
  
     border: 1px solid #005BAA;
@@ -40,22 +28,30 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative; /* Positioning context for pseudo-element */
+
 }
 .history-section--image-container{
     display: flex;
     justify-content: center;
     align-items: center;
 
+
 }
+
+
 .history-section--image-container:nth-child(odd) {
     justify-content: flex-start;
-    margin-left: 120px;
+    margin-left: 220px;
+    position: relative;
+    /* margin-bottom: 50px; */
 }
 
 .history-section--image-container:nth-child(even) {
     justify-content: flex-end;
     flex-direction: row-reverse;
-    margin: auto;
+    /* margin-right: 20px; */
+    margin-left: 550px;
     
 }
 /* .history-section--image-display-container .history-section--image-container:nth-child(2n) {
@@ -67,3 +63,40 @@
     text-align: center;
     width: 120px;
 }
+
+@media screen and (max-width: 768px) {
+    .history-section--title {
+      font-size: 14px; /* Adjust font size for smaller screens */
+      width: 150px; /* Adjust width of title container */
+      padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .history-section--desktop{
+        width: 150px;
+        height: 150px;
+    }
+    .history-section--year{
+        width: 80px;
+        height: 80px;
+    }
+  
+    .history-section--image-display-container {
+      padding: 2rem; /* Adjust padding for smaller screens */
+      margin-bottom: 20px;
+    }
+  
+    .history-section--image-container:nth-child(odd){
+      margin: auto; /* Reset margin for smaller screens */
+    }
+  
+    .history-section--image-container:nth-child(even) {
+      margin: auto; /* Reset margin for smaller screens */
+      flex-direction: row;
+      margin-top: 20px;
+    }
+  
+    .history-section--block .history-section--image-text-container .history-section--text {
+      font-size: 10px; /* Adjust font size for smaller screens */
+    }
+  }
+  

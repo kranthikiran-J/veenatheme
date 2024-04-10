@@ -710,7 +710,8 @@
           "type": "custom-block",
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845_1.png",
-            "image_mobile": "shopify:\/\/shop_images\/Group_1000002349.png"
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002349.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
           }
         },
         "custom_block_ykt43z": {
