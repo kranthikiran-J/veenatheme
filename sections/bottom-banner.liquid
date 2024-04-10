@@ -1,27 +1,28 @@
 {{ 'bottom-banner.css' | asset_url | stylesheet_tag }}
-<div class="first-section" page-width {{ section.settings.image_position }}>
-    <div class="first-section--container">
+<div class="banner-content" page-width >
+{% comment %} <div class="first-section" page-width > {% endcomment %}
         {%for block in section.blocks %}
-            <div class="first-section--block">
-                <div class="first-section-block--img-container">
-                    {% render 'responsive-picture',
-                        desktopImage: block.settings.image_desktop,
-                        mobileImage: block.settings.image_mobile
-                    %}
-                </div>
-                <div class="first-section-block--content">
-                    <div><p> &#x2022 {{ block.settings.pre_heading }}</p></div>
-                    <div>{{ block.settings.title }}</div>
-                    <div>{{ block.settings.description }}</div>
-                    <div><a class="button" href="{{ block.settings.button_link }}">{{ block.settings.button_label }}</a></div>
-                </div>
+            <div class="banner-content--image-container">
+            {% comment %} <div class="first-section-block--img-container"> {% endcomment %}
+                {% render 'responsive-picture',
+                    desktopImage: block.settings.image_desktop,
+                    mobileImage: block.settings.image_mobile
+                %}
+            </div>
+            {% comment %} <div class="first-section-block--content"> {% endcomment %}
+            <div class="banner-content--text-container">
+                <ul><li> {{ block.settings.pre_heading }}</li></ul>
+                <h3>{{ block.settings.title }}</h3>
+                <p>{{ block.settings.description }}</p>
+                <a class="button" href="{{ block.settings.button_link }}"><span>{{ block.settings.button_label }}</span></a>
             </div>
         {% endfor %}
-    </div>
 </div>
+
+
 {% schema %}
 {
-  "name": "First section",
+  "name": "Bottom Banner",
   "tag": "section",
   "class": "section",
   "settings": [
@@ -83,7 +84,7 @@
   ],
   "presets": [
     {
-      "name": "First Section"
+      "name": "Bottom Banner"
     }
   ]
 }

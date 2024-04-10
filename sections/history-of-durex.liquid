@@ -1,0 +1,51 @@
+{{ 'history-of-durex.css' | asset_url | stylesheet_tag }}
+<div class="hiistory-section" page-width>
+
+    <h1>Hello world</h1>
+</div>
+
+{% schema %}
+    {
+        "name": "history of durex",
+        "tag": "section",
+        "class": "section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "History of Durex"
+
+            }
+        ],
+        "blocks": [
+            {
+                "type": "custom-block",
+                "name": "custom-block",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image_desktop",
+                        "label": "Event image"
+                        
+                      },
+                      {
+                        "type": "image_picker",
+                        "id": "image_mobile",
+                        "label": "Year image"
+                      },
+                      {
+                        "type": "image_picker",
+                        "id": "image_line",
+                        "label": "line image"
+                      }
+                ]
+            }
+        ],
+        "presets": [
+          {
+            "name": "History of Durex"
+          }
+        ]
+    }
+{% endschema %}
