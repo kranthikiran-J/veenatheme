@@ -29,15 +29,16 @@
     flex-direction: column;
     justify-content: center;
     position: relative; /* Positioning context for pseudo-element */
+    margin-bottom: 30px;
 
 }
 .history-section--image-container{
     display: flex;
     justify-content: center;
     align-items: center;
-
-
+   
 }
+
 
 
 .history-section--image-container:nth-child(odd) {

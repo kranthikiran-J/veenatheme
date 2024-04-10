@@ -14,7 +14,8 @@
           "type": "custom-block",
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845.png",
-            "image_mobile": "shopify:\/\/shop_images\/Group_1000002347.png"
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002347.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
           }
         },
         "custom_block_txnzzk": {
