@@ -12,15 +12,20 @@
     padding: 5px;
     
 }
-.history-section--desktop{
-    width: 350px;
-    height: 350px;
+/* .history-section--desktop{
+    width: 100px;
+    height: 200px;
 }
 .history-section--line{
-    width: 350px;
+    width: 100px;
     height: 10px;
 }
 .history-section--year{
-    width: 350px;
-    height: 350px;
+    width: 200px;
+    height: 200px;
+} */
+.history-section--image-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
