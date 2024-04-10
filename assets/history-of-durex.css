@@ -29,9 +29,9 @@
     justify-content: flex-start;
     align-items: center;
 }
-.history-section--text{
+.history-section--block .history-section--image-text-container .history-section--text{
     font-size: 12px;
     color: #696969;
     text-align: center;
-    width: 350px;
+    width: 120px;
 }
