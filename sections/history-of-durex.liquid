@@ -1,7 +1,17 @@
 {{ 'history-of-durex.css' | asset_url | stylesheet_tag }}
-<div class="hiistory-section" page-width>
+<div class="history-section" page-width>
+    <div >
+        <h3 class="history-section--title">{{ section.settings.heading }}</h3>
+    </div>
 
-    <h1>Hello world</h1>
+    {% for block in section.blocks %}
+        <div class="history-section--image-container">
+            <img src="{{ block.settings.image_desktop  | image_url}}" class="history-section--desktop" alt="Event Image" width=250 height=200>
+            <img src="{{ block.settings.image_line  | image_url}}"  class="history-section--line" alt="Line Image" width=150 height=10>
+            <img src="{{ block.settings.image_mobile   | image_url}}" class="history-section--year"  alt="Year Image" width=250 height=200>
+        </div>
+    {% endfor %}
+    
 </div>
 
 {% schema %}
