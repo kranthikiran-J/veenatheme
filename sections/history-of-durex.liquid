@@ -1,18 +1,23 @@
 {{ 'history-of-durex.css' | asset_url | stylesheet_tag }}
 <div class="history-section" page-width>
-    <div >
+    <div>
         <h3 class="history-section--title">{{ section.settings.heading }}</h3>
     </div>
 
     {% for block in section.blocks %}
-        <div class="history-section--image-container">
-            <img src="{{ block.settings.image_desktop  | image_url}}" class="history-section--desktop" alt="Event Image" width=200 height=200>
-            <img src="{{ block.settings.image_line  | image_url}}"  class="history-section--line" alt="Line Image" width=80 height=2>
-            <img src="{{ block.settings.image_mobile   | image_url}}" class="history-section--year"  alt="Year Image" width=100 height=100>
+        <div class="history-section--block">
+            <div class="history-section--image-text-container">
+                <img src="{{ block.settings.image_desktop | image_url }}" class="history-section--desktop" alt="Event Image" width="200" height="200">
+                <p class="history-section--text">{{ block.settings.title }}</p>
+            </div>
+            <div class="history-section--image-row">
+                <img src="{{ block.settings.image_line | image_url }}" class="history-section--line" alt="Line Image" width="80" height="2">
+                <img src="{{ block.settings.image_mobile | image_url }}" class="history-section--year" alt="Year Image" width="100" height="100">
+            </div>
         </div>
     {% endfor %}
-    
 </div>
+
 
 {% schema %}
     {
