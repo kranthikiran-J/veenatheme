@@ -794,6 +794,12 @@
       "settings": {
         "heading": "Business Formal Choices"
       }
+    },
+    "marquee_collections_P48j3G": {
+      "type": "marquee-collections",
+      "settings": {
+        "heading": "Marquee Collections"
+      }
     }
   },
   "order": [
@@ -813,6 +819,7 @@
     "collapsible_content_Vhc64a",
     "bottom_banner_bzRPWr",
     "history_of_durex_A8qeVU",
-    "men_women_image_with_text_dMJwm6"
+    "men_women_image_with_text_dMJwm6",
+    "marquee_collections_P48j3G"
   ]
 }
