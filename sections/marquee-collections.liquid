@@ -1,16 +1,35 @@
 {{ 'marquee-collections.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'marquee-collections.js' | asset_url }}" defer></script>
+{% comment %} {{ 'new-collection.svg' | asset_url }}
+{{ 'new-clothing-collection.svg' | asset_url }} {% endcomment %}
 
 <div class="custome-marquee">
     <div>
-      <span>WOMEN'S CLOTHING COLLECTION</span>
-      <span><button>EXPLORE</button></span>
-      <span>NEW COLLECTION</span>
-      <span><button>GRAB THIS OFFER</button></span>
-      <span>MENS CLOTHING COLLECTION</span>
-      <span><button>EXPLORE</button></span>
+        
+      <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
+      <a><button class="explore-btn">EXPLORE</button></a>
+      
+      <span><img src="{{ 'new-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>NEW COLLECTION</span>
+      <a><button class="grab-this-offer-btn">GRAB THIS OFFER</button></a>
+
+      
+      <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span>
+      <a><button class="explore">EXPLORE</button></a>
+
+      
+      <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
+      <a><button class="explore-btn">EXPLORE</button></a>
+
+            
+      <span><img src="{{ 'new-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>NEW COLLECTION</span>
+      <a><button class="grab-this-offer-btn">GRAB THIS OFFER</button></a>
+
+      
+      <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span>
+      <a><button class="explore">EXPLORE</button></a>
         
     </div>
-  </div>    
+  </div>     
 
   {% schema %}
   {

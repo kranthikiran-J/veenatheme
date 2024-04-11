@@ -3,11 +3,15 @@
     height:100px;
     overflow: hidden;
     position: relative;
+    display: flex;
+    align-self: center;
+    margin-bottom: 20px;
   }
-  
   .custome-marquee div {
          background: linear-gradient(90deg, rgba(218, 64, 68, 0.25), rgba(255, 250, 126, 0.25) 30.21%, rgba(218, 64, 68, 0.25) 64.1%, rgba(255, 250, 126, 0.25) 100%);
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200%;
     height: 100px;
   
@@ -23,7 +27,7 @@
       padding:10px;
     margin-left:50px;
     font-size: 2rem;
-    word-spacing:1rem;
+    /* word-spacing:1rem; */
   /*   letter-spacing:0.8rem; */
   /*   text-stroke:1px; */
     text-transform:uppercase;
@@ -35,6 +39,29 @@
      
     
   }
+  span img{
+    margin-right: 10px;
+  }
+  .explore-btn{
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 5px;
+    width: 100px;
+    border-radius: 18px;
+  }
+  .grab-this-offer-btn{
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 5px;
+    width: 180px;
+    border-radius: 18px;
+  }
+  .explore{
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    text-decoration-skip-ink: 50em;
+  }
   .custom-marquee div span button{
       border:1px solid black;
       width:auto;
@@ -45,20 +72,25 @@
   
   @keyframes marquee {
     0% { left: 0; }
-    50% { left: -50%; }
-    100% { left: 0; }
+    100% { left: -100%; }
+
+
   }
+
   
   
   @media only screen and (max-width: 600px) {
     .custome-marquee div {
       background-color:#29375F;
     display: block;
-    width: 200%;
-    height: 70px;
+    width: 475%;
+    height: 100px;
     }
     .custome-marquee span {
       font-size: 2rem;
     }
     
   }
+
+
+
