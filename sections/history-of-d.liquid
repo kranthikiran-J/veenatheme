@@ -1,20 +1,26 @@
 {{ 'history-of-d.css' | asset_url | stylesheet_tag }}
 
+<div class="history-section--title-container" >
+    <h3 class="history-section--title">{{ section.settings.heading }}</h3>
+</div>
 <div class="img-outer-container">
+    <img src="{{ 'heart-1.png' | asset_url }}" class="heart-logo" alt="Heart Logo" height=auto width=auto>
+
     <div class="img-container">
         {% for block in section.blocks %}
-            <div class="cont">
+            <div class="cont">`
                 <div class="event-container">
-                <img src="{{ block.settings.image_desktop  | image_url}}"  class="event-img" alt="event img" width=300px height=250px>
+                <img src="{{ block.settings.image_desktop  | image_url}}"  class="event-img" alt="event img" width=250px height=200px>
                     <img  src="{{ block.settings.dashed_line_img | image_url}}"  class="dashed-line" alt="dashed line" width=auto height=auto>
                     <div class="year">
-                        <img src="{{ block.settings.image_mobile   | image_url}}" class="year-img" alt="year img" width=150px height=150px >
-                        <img src="{{ block.settings.vertical_line_img | image_url}}" alt="line" width=auto height=auto>
+                        <img src="{{ block.settings.image_mobile   | image_url}}" class="year-img" alt="year img" width=100px height=100px >
+                        <img src="{{ block.settings.vertical_line_img | image_url}}" class="vertical-img" alt="line" width=auto height=auto>
                     </div>
                 </div>
             </div>
         {% endfor %}
     </div>
+    <img src="{{ 'heart-2.png' | asset_url }}" class="heart-2-logo" alt="Heart Logo" height=auto width=auto>
 </div>
 
 
