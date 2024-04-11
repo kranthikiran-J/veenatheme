@@ -1,19 +1,25 @@
 
-.banner-content{
+.men-women-banner-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.men-women-first-section{
     position:relative;
     display:flex;
     justify-content:center;
     align-items:end;
    
-    height:450px;
+    height:650px;
     padding:0px 40px;
-    margin:20px auto;
+    /* margin:20px auto; */
+    margin-bottom: 30px;
     box-sizing:border-box;
     overflow:hidden;
     border-radius:18px;
-    width:93%;
+    width:45%;
 }
-.banner-content--image-container{
+.men-women-banner-content--image-container{
     position:absolute;
     height: 100%;
    object-fit:cover;
@@ -23,10 +29,10 @@
     overflow-y:hidden;
 }
 
-.banner-content:hover .banner-content--image-container{
+.men-women-banner-content--image-container:hover {
     transform: scale(1.1);
 }
-.banner-content--text-container{
+.men-women-banner-content--text-container{
     z-index:2;
     display:flex;
     flex-direction:column;
@@ -35,7 +41,7 @@
     color:#fff;
     margin-bottom:20px;
 }
-.banner-content--text-container a{
+.men-women-banner-content--text-container a{
         color:#fff;
         width:150px;
         /* height:40px; */
@@ -50,23 +56,23 @@
         background: transparent;
 }
 
-.banner-content--text-container a{
+.men-women-banner-content--text-container a{
     border: 1px solid #FFFFFF;
 }
-.banner-content--text-container a span{
+.men-women-banner-content--text-container a span{
     font-size:16px;
     color:#FFFFFF;
     width:150px;
 }
-.banner-content--text-container a:hover span{
+.men-women-banner-content--text-container a:hover span{
     color: rgb(208, 60, 63);
 }
-.banner-content--text-container a:hover{
+.men-women-banner-content--text-container a:hover{
     background:#FFFFFF;
     border: none;
     box-shadow: none;
 }
-.banner-content--text-container p{
+.men-women-banner-content--text-container p{
     color:#FFFFFFCC;
     font-size:14px;
     width:490px;
@@ -74,13 +80,20 @@
     line-height:1;
 }
 
-.banner-content--text-container ul>li{
+.men-women-banner-content--text-container ul>li{
     color:#fff;
     list-style-type:none;
     font-size:14px;
     box-sizing:border-box;
 }
-.banner-content--text-container h3 {
+.men-women-banner-content--text-container ul{
+    border: 1px solid #FFFFFF;
+    border-radius: 24px;
+    padding: 2px;
+    width: 100px;
+    text-align: center;
+}
+.men-women-banner-content--text-container h3 {
     color:#fff;
     font-size:44px;
     width:490px;
@@ -93,6 +106,34 @@
 
 /* Media Queries for Small screens (e.g., smartphones) */
 @media only screen and (max-width: 767px) {
+    .men-women-banner-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .men-women-first-section{
+        position:relative;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+       
+        height:700px;
+        padding:0px 40px;
+        /* margin:20px auto; */
+        margin-bottom: 30px;
+        box-sizing:border-box;
+        overflow:hidden;
+        border-radius:18px;
+        width:93%;
+    }
+    .men-women-banner-content--text-container{
+        z-index:2;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        color:#fff;
+        margin-bottom:20px;
+    }
     .banner-content {
         position:relative;
     display:flex;
@@ -133,25 +174,29 @@
     line-height: 0;
     margin: 0 auto; 
     }
-    .banner-content--text-container p {
+    .men-women-banner-content--text-container p {
         width: auto; 
         font-size:12px;
     }
-    .banner-content--text-container h3 {
+    .men-women-banner-content--text-container h3 {
         font-size:24px;
         width:auto;
      
     }
-    .banner-content--text-container ul>li{
+    .men-women-banner-content--text-container ul>li{
         font-size:12px;
     }
 
-    .banner-content--text-container a span{
+    .men-women-banner-content--text-container a span{
         font-size:14px;
+        color: #000;
     }
-    .banner-content--text-container a {
+    .men-women-banner-content--text-container a {
         font-size:14px;
         margin-bottom: 30px;
+        background-color: #fff;
+        border: none;
+        
     } 
 
 }
