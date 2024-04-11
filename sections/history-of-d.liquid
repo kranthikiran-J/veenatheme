@@ -1,0 +1,51 @@
+
+{% schema %}
+    {
+        "name": "History of D",
+        "tag": "section",
+        "class": "section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "History of Durex"
+
+            }
+        ],
+        "blocks": [
+            {
+                "type": "custom-block",
+                "name": "custom-block",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image_desktop",
+                        "label": "Event image"
+                        
+                      },
+                      {
+                        "type": "image_picker",
+                        "id": "image_mobile",
+                        "label": "Year image"
+                      },
+                      {
+                        "type": "image_picker",
+                        "id": "dashed_line_img",
+                        "label": "Dashed line image"
+                      },
+                      {
+                        "type": "image_picker",
+                        "id": "vertical_line_img",
+                        "label": "Vertical line image"
+                      }
+                ]
+            }
+        ],
+        "presets": [
+          {
+            "name": "History of D"
+          }
+        ]
+    }
+{% endschema %}
