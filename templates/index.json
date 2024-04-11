@@ -756,8 +756,43 @@
         "custom_block_cpWDey",
         "custom_block_CTEQJE"
       ],
+      "disabled": true,
       "settings": {
         "heading": "History of Durex"
+      }
+    },
+    "men_women_image_with_text_dMJwm6": {
+      "type": "men-women-image-with-text",
+      "blocks": {
+        "custom_block_AVxP49": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Rectangle_55_e3b6bc5f-3d8f-4f17-8edf-6527d3cacf31.webp",
+            "image_mobile": "shopify:\/\/shop_images\/Rectangle_55_e3b6bc5f-3d8f-4f17-8edf-6527d3cacf31.webp",
+            "pre_heading": "Men's",
+            "title": "<p>Introducing Our Distinguished Men's Clothing Collection<\/p>",
+            "button_label": "Explore",
+            "button_link": ""
+          }
+        },
+        "custom_block_Rx8W7E": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Rectangle_56_cfe99a12-1d6c-471e-960a-d79e80c354a9.webp",
+            "image_mobile": "shopify:\/\/shop_images\/Rectangle_56_cfe99a12-1d6c-471e-960a-d79e80c354a9.webp",
+            "pre_heading": "Women's",
+            "title": "<p>Elevate Your Wardrobe With Our Women's Clothing Collection<\/p>",
+            "button_label": "Explore",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_AVxP49",
+        "custom_block_Rx8W7E"
+      ],
+      "settings": {
+        "heading": "Business Formal Choices"
       }
     }
   },
@@ -777,6 +812,7 @@
     "featured_blog_hxF6Bn",
     "collapsible_content_Vhc64a",
     "bottom_banner_bzRPWr",
-    "history_of_durex_A8qeVU"
+    "history_of_durex_A8qeVU",
+    "men_women_image_with_text_dMJwm6"
   ]
 }
