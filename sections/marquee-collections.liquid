@@ -1,0 +1,133 @@
+<style>
+        
+
+
+.custome-marquee {
+    width: 100%;
+    height:100px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .custome-marquee div {
+         background: linear-gradient(90deg, rgba(218, 64, 68, 0.25), rgba(255, 250, 126, 0.25) 30.21%, rgba(218, 64, 68, 0.25) 64.1%, rgba(255, 250, 126, 0.25) 100%);
+    display: block;
+    width: 200%;
+    height: 100px;
+  
+    position: absolute;
+    overflow: hidden;
+  
+    animation: marquee 15s linear infinite;
+  }
+  
+  .custome-marquee span {
+    float: left;
+    color:#000;
+      padding:10px;
+    margin-left:50px;
+    font-size: 2rem;
+    word-spacing:1rem;
+  /*   letter-spacing:0.8rem; */
+  /*   text-stroke:1px; */
+    text-transform:uppercase;
+    font-family: "Montserrat", sans-serif;
+  /*   -webkit-text-stroke: 2px #000; */
+  /*   font-style; */
+  /*   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000; */
+    text-align:center;
+     
+    
+  }
+  .custom-marquee div span button{
+      border:1px solid black;
+      width:auto;
+      padding:3px;
+      border-radius:18px
+      background:transparent;
+    }
+  
+  @keyframes marquee {
+    0% { left: 0; }
+    50% { left: -50%; }
+    100% { left: 0; }
+  }
+  
+  
+  @media only screen and (max-width: 600px) {
+    .custome-marquee div {
+      background-color:#29375F;
+    display: block;
+    width: 200%;
+    height: 70px;
+    }
+    .custome-marquee span {
+      font-size: 2rem;
+    }
+    
+  }
+</style>
+<div class="custome-marquee">
+    <div>
+      <span>WOMEN'S CLOTHING COLLECTION</span>
+      <span><button>EXPLORE</button></span>
+      <span>NEW COLLECTION</span>
+      <span><button>GRAB THIS OFFER</button></span>
+      <span>MENS CLOTHING COLLECTION</span>
+      <span><button>EXPLORE</button></span>
+        
+    </div>
+  </div>    
+
+  {% schema %}
+  {
+    "name": "Marquee collection section",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Marquee Collections"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "custom-block",
+        "name": "custom-block",
+        "settings": [
+
+          {
+            "type": "image_picker",
+            "id": "image_collection",
+            "label": "collection image"
+          },
+          {
+            "type": "text",
+            "id": "pre_heading",
+            "label": "Pre Heading",
+            "default": "Business Formal Choices"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button label",
+            "default": "Explore"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button url"
+          }
+          
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Marquee collection Section"
+      }
+    ]
+  }
+  {% endschema %}
