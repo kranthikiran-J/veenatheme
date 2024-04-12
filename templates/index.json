@@ -800,6 +800,15 @@
       "settings": {
         "heading": "Marquee Collections"
       }
+    },
+    "featured_custom_collection_wqE9bJ": {
+      "type": "featured-custom-collection",
+      "settings": {
+        "heading": "Featured Collection",
+        "collection": "featured-collections",
+        "button_label": "See All Product",
+        "button_link": ""
+      }
     }
   },
   "order": [
@@ -820,6 +829,7 @@
     "bottom_banner_bzRPWr",
     "history_of_durex_A8qeVU",
     "men_women_image_with_text_dMJwm6",
-    "marquee_collections_P48j3G"
+    "marquee_collections_P48j3G",
+    "featured_custom_collection_wqE9bJ"
   ]
 }

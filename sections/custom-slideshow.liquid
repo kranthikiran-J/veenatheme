@@ -1,9 +1,12 @@
+
+
 {% schema %}
 {
     "name": "Custom Slideshow",
     "tag": "section",
     "class": "section",
     "settings": [
+
         {
             "type": "header",
             "content": "Slider options"
@@ -20,6 +23,7 @@
             "label": "Show dots",
             "default":false
         },
+        
         {
             "type": "checkbox",
             "id": "show_arrows",
@@ -67,60 +71,6 @@
             ],
             "default": "slide"
             
-        },
-        {
-            "type": "header",
-            "content": "Section Padding"
-        },
-        {
-            "type": "range",
-            "id": "padding_top",
-            "min":20,
-            "max": 100,
-            "step": 10,
-            "unit": "px",
-            "label": "Padding Top",
-            "default": 0
-        },
-        {
-            "type": "range",
-            "id": "padding_bottom",
-            "min":0,
-            "max": 100,
-            "step": 10,
-            "unit": "px",
-            "label": "Padding Bottom",
-            "default": 0
-        }
-    ],
-    "blocks": [
-        {
-            "type": "Slide",
-            "name" : "Slide",
-            "settings": [
-                {
-                    "type": "header",
-                    "content": "Media options"
-                },
-                {
-                    "type": "image_picker",
-                    "id": "desktop_image",
-                    "label": "Desktop Image",
-                    "info": "Recommended size : 1360 x 633 px"
-                },
-                {
-                    "type": "image_picker",
-                    "id": "mobile_image",
-                    "label": "Mobile Image",
-                    "info": "Recommended size : 360 x 282 px"
-                }
-            ]
-        }
-
-    ],
-    "presets": [
-        {
-         "name": "Custom slideshow"
         }
     ]
 }
