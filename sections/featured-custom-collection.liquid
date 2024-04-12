@@ -1,12 +1,16 @@
 {{ 'featured-custom-collection.css' | asset_url | stylesheet_tag }}
-<div class="featured-custom-tile-bar">
+<div class="featured-custom-title-bar">
     <h3 class="featured-custom-title">{{ section.settings.heading }}</h3>
     <a class="featured-custom-button"> {{ section.settings.button_label }} </a>
 </div>
+<div class="featured-custom-collection-contianer">
+    {% for item in settings.collection %}
+        <div>{{ item.title }}</div>
+    {% endfor %}
 
-<div>
-    {{ {% assign collection = section.settings.collection %} }}
 </div>
+
+
 
 
 {% schema %}

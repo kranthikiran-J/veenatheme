@@ -801,52 +801,13 @@
         "heading": "Marquee Collections"
       }
     },
-<<<<<<< HEAD
-    "featured_custom_collection_wqE9bJ": {
+    "featured_custom_collection_6PTxhj": {
       "type": "featured-custom-collection",
       "settings": {
         "heading": "Featured Collection",
         "collection": "featured-collections",
         "button_label": "See All Product",
         "button_link": ""
-=======
-    "collage_JHzBdG": {
-      "type": "collage",
-      "blocks": {
-        "image_iGVAg4": {
-          "type": "image",
-          "settings": {
-          }
-        },
-        "product_qpi3Er": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection_hGgPTd": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_iGVAg4",
-        "product_qpi3Er",
-        "collection_hGgPTd"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
->>>>>>> 535b6fdad44af580e4eb704837245a2914de3f94
       }
     }
   },
@@ -869,10 +830,6 @@
     "history_of_durex_A8qeVU",
     "men_women_image_with_text_dMJwm6",
     "marquee_collections_P48j3G",
-<<<<<<< HEAD
-    "featured_custom_collection_wqE9bJ"
-=======
-    "collage_JHzBdG"
->>>>>>> 535b6fdad44af580e4eb704837245a2914de3f94
+    "featured_custom_collection_6PTxhj"
   ]
 }

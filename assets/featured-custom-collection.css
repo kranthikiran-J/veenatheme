@@ -1,18 +1,22 @@
 .featured-custom-title-bar{
+    padding-right: 2rem;
+    padding-left: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .featured-custom-title{
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 .featured-custom-button{
     color: #fff;
     background-color: #DD1D1D;
     width: 130px;
+    height:40px;
     border: none;
     border-radius: 18px;
-    padding: 2px;
+    padding: 5px;
     text-align: center;
+    
 }
