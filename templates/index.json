@@ -798,27 +798,60 @@
     "marquee_collections_P48j3G": {
       "type": "marquee-collections",
       "settings": {
-        "heading": "Marquee Collections"
+        "bg_color": "",
+        "padding": 16,
+        "scroll_time": "50",
+        "font_color": "#000000",
+        "font_size": 80,
+        "pause_text": "initial"
       }
     },
     "featured_custom_collection_6PTxhj": {
       "type": "featured-custom-collection",
-      "blocks": {
-        "custom_V4ANPx": {
-          "type": "custom",
-          "settings": {
-            "collection": "featured-collections"
-          }
-        }
-      },
-      "block_order": [
-        "custom_V4ANPx"
-      ],
       "settings": {
         "heading": "Featured Collection",
         "collection": "featured-collections",
         "button_label": "See All Product",
         "button_link": ""
+      }
+    },
+    "marquee_collections_XrirVz": {
+      "type": "marquee-collections",
+      "blocks": {
+        "block_ERbV8j": {
+          "type": "block",
+          "settings": {
+            "text": "NEW COLLECTION",
+            "checkbox": false
+          }
+        },
+        "block_GUYgmr": {
+          "type": "block",
+          "settings": {
+            "text": "MEN'S CLOTHING COLLECTION",
+            "checkbox": false
+          }
+        },
+        "block_DWQHWA": {
+          "type": "block",
+          "settings": {
+            "text": "WOMEN'S CLOTHING COLLECTION",
+            "checkbox": false
+          }
+        }
+      },
+      "block_order": [
+        "block_ERbV8j",
+        "block_GUYgmr",
+        "block_DWQHWA"
+      ],
+      "settings": {
+        "bg_color": "",
+        "padding": 25,
+        "scroll_time": "100",
+        "font_color": "#000000",
+        "font_size": 80,
+        "pause_text": "initial"
       }
     }
   },
@@ -841,6 +874,7 @@
     "history_of_durex_A8qeVU",
     "men_women_image_with_text_dMJwm6",
     "marquee_collections_P48j3G",
-    "featured_custom_collection_6PTxhj"
+    "featured_custom_collection_6PTxhj",
+    "marquee_collections_XrirVz"
   ]
 }
