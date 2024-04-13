@@ -803,6 +803,17 @@
     },
     "featured_custom_collection_6PTxhj": {
       "type": "featured-custom-collection",
+      "blocks": {
+        "custom_V4ANPx": {
+          "type": "custom",
+          "settings": {
+            "collection": "featured-collections"
+          }
+        }
+      },
+      "block_order": [
+        "custom_V4ANPx"
+      ],
       "settings": {
         "heading": "Featured Collection",
         "collection": "featured-collections",

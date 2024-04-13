@@ -1,3 +1,8 @@
+{{ 'custom-sildeshow.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+{% endstyle %}
+
 {% schema %}
     {
         "name":"custom slidshow",
@@ -142,24 +147,7 @@
                     {
                         "type": "header",
                         "content":" positions"
-                    },
-                    {
-                        "type": "select",
-                        "id": "desktop_content_alignment",
-                        "label": "Desktop Content Alignment",
-                        "options": [
-                            {
-                            "value": "left",
-                            "label": "Left"
-                            },
-                            {
-                                "value": "center",
-                                "label": "Center"
-                                }
-                        ],
-                        "default": "",
-                        "info": ""
-                    },
+                    }
                 ]
             }
         ],

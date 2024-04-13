@@ -1,10 +1,14 @@
 {
-  "name": "veenatheme",
+  "name": "b03-kranthi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "shopify theme dev -s https://b03-kranti-j.myshopify.com/",
+    "dev-sync": "shopify theme dev --theme-editor-sync -s https://b03-kranti-j.myshopify.com/",
+    "pull": "shopify theme pull -s https://b03-kranti-j.myshopify.com/",
+    "pull-json": "shopify theme pull -d -o *.json -s https://b03-kranti-j.myshopify.com/",
+    "share": "shopify theme share -s https://b03-kranti-j.myshopify.com/"
   },
   "repository": {
     "type": "git",

@@ -3,13 +3,31 @@
     <h3 class="featured-custom-title">{{ section.settings.heading }}</h3>
     <a class="featured-custom-button"> {{ section.settings.button_label }} </a>
 </div>
-<div class="featured-custom-collection-contianer">
-    {% for item in settings.collection %}
-        <div>{{ item.title }}</div>
-    {% endfor %}
 
+<div class="featured-custom-collection-container">
+    {% assign collection = collections[section.settings.collection] %}
+    {% if collection %}
+        {% for product in collection.products %}
+            <div class="product">
+                <h4>{{ product.title }}</h4>
+                <p>{{ product.description }}</p>
+                <p>Price: {{ product.price | money }}</p>
+                <p>tags : {{ product.tags  }}</p>
+                <p>Vendor : {{ product.cendor }}</p>
+                <img src="{{ product.featured_image.src | image_url: 'medium' }}" alt="{{ product.title }}" />
+                <!-- Add more product details as needed -->
+                {% for variant in product.variants %}
+                    <p>Variant: {{ variant.title }}</p>
+                    <p>SKU: {{ variant.sku }}</p>
+                    <!-- Access more variant information as needed -->
+                {% endfor %}
+            </div>
+            <!-- Add more product details as needed -->
+        {% endfor %}
+    {% else %}
+        <p>No products found in the selected collection.</p>
+    {% endif %}
 </div>
-
 
 
 
@@ -41,20 +59,6 @@
                     "type": "url",
                     "id": "button_link",
                     "label": "Button url"
-            }
-        ],
-        "blocks": [
-            {
-             "type": "custom",
-             "name" : "custom",
-             "settings": [
-                {
-                 "type": "collection",
-                 "id": "collection",
-                "label": "collection"
-
-                }
-             ]
             }
         ],
         "presets": [
