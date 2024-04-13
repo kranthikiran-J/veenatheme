@@ -31,9 +31,9 @@
     </div>
   </div>     
 
-  {% schema %}
+  {% comment %} {% schema %}
   {
-    "name": "Marquee collection ection",
+    "name": "Marquee collection section",
     "tag": "section",
     "class": "section",
     "settings": [
@@ -82,4 +82,95 @@
       }
     ]
   }
-  {% endschema %}
+  {% endschema %} {% endcomment %}
+
+  {% schema %}
+{
+  "name": "Sliding Text",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 50,
+      "step": 1,    
+      "unit": "px",
+      "label": "Padding from top and bottom",
+      "default": 16
+    },
+    {
+      "type": "text",
+      "label": "Scroll Time",
+      "id": "scroll_time",
+      "default": "50"
+    },
+    {
+      "type": "color",
+      "id": "font_color",
+      "label": "Font color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 8,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 80
+    },
+    {
+      "type": "select",
+      "id": "pause_text",
+      "label": "Pause text on mouse hover",
+      "options": [
+        {
+          "value": "paused",
+          "label": "Yes"
+        },
+        {
+          "value": "initial",
+          "label": "No"
+        }
+      ],
+      "default": "initial"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_picker",
+      "label": "Pick splitter image"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Sliding text",
+      "type": "block",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Add Text",
+          "id": "text"
+        },
+        {
+          "type": "checkbox",
+          "id": "checkbox",
+          "label": "Text-outline",
+          "default": false,
+          "info": "Make your text visible by outline"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sliding Text"
+    }
+  ]
+}
+{% endschema %}
