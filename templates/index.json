@@ -821,22 +821,31 @@
         "block_ERbV8j": {
           "type": "block",
           "settings": {
+            "image_picker": "shopify:\/\/shop_images\/svgviewer-output_1.svg",
             "text": "NEW COLLECTION",
-            "checkbox": false
+            "checkbox": false,
+            "button_label": "GRAB THIS OFFER",
+            "button_link": ""
           }
         },
         "block_GUYgmr": {
           "type": "block",
           "settings": {
+            "image_picker": "shopify:\/\/shop_images\/svgviewer-output.svg",
             "text": "MEN'S CLOTHING COLLECTION",
-            "checkbox": false
+            "checkbox": false,
+            "button_label": "EXPLORE",
+            "button_link": ""
           }
         },
         "block_DWQHWA": {
           "type": "block",
           "settings": {
+            "image_picker": "shopify:\/\/shop_images\/svgviewer-output.svg",
             "text": "WOMEN'S CLOTHING COLLECTION",
-            "checkbox": false
+            "checkbox": false,
+            "button_label": "EXPLORE",
+            "button_link": ""
           }
         }
       },

@@ -4,7 +4,10 @@
 {{ 'new-clothing-collection.svg' | asset_url }} {% endcomment %}
 
 <div class="custome-marquee">
+  
+
     <div>
+      {% for block in section.blocks %}
         
       {% comment %} <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
       <a><button class="explore-btn">EXPLORE</button></a>
@@ -14,22 +17,34 @@
 
       
       <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span>
-      <a><button class="explore">EXPLORE</button></a>
+      <a><button class="explore">EXPLORE</button></a> {% endcomment %}
 
       
-      <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
-      <a><button class="explore-btn">EXPLORE</button></a>
+      
+      {% comment %} <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span> {% endcomment %}
+      <div class="category-container"></div>
+      <span><img src="{{ block.settings.image_picker | image_url }}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
+      {% comment %} <a><button class="explore-btn">EXPLORE</button></a> {% endcomment %}
+      <a class="explore-btn" href="{{ block.settings.button_link }}"><span>{{ block.settings.button_label }}</span></a>
+
 
             
-      <span><img src="{{ 'new-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>NEW COLLECTION</span>
-      <a><button class="grab-this-offer-btn">GRAB THIS OFFER</button></a>
+      {% comment %} <span><img src="{{ 'new-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>NEW COLLECTION</span> {% endcomment %}
+      <span><img src="{{ block.settings.image_picker | image_url }}" alt="New Collection" width=20 height=20>NEW COLLECTION</span>
+      {% comment %} <a><button class="grab-this-offer-btn">GRAB THIS OFFER</button></a> {% endcomment %}
+      <a class="grab-this-offer-btn" href="{{ block.settings.button_link }}"><span>{{ block.settings.button_label }}</span></a>
+
 
       
-      <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span>
-      <a><button class="explore">EXPLORE</button></a>
-         {% endcomment %}
-    </div>
-  </div>     
+      {% comment %} <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span> {% endcomment %}
+      <span><img src="{{ block.settings.image_picker | image_url }}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span>
+      <a class="explore" href="{{ block.settings.button_link }}"><span>{{ block.settings.button_label }}</span></a>
+
+      {% comment %} <a><button class="explore">EXPLORE</button></a> {% endcomment %}
+    {% endfor %}
+  
+</div>
+  </div>    
 
   {% comment %} {% schema %}
   {

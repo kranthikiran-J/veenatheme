@@ -113,7 +113,6 @@
     align-items: center;
 }
 
-
 /* Product grid */
 .product-grid {
     display: flex;
@@ -218,4 +217,35 @@
 
 .product-container-item:hover .image-container img.product-img {
     display: none;
+}
+
+
+/* Alternatively, you can set a fixed position from the top */
+#splide-2 .splide__arrow {
+    top: -28px; /* Adjust as needed */
+    bottom: unset;
+
+}
+/* Adjust the position of the arrows for the second row */
+#splide-2 .splide__arrow--prev {
+    left: 0px; /* Adjust as needed */
+    right: unset;
+}
+
+#splide-2 .splide__arrow--next {
+    right: 0px; /* Adjust as needed */
+    left: unset;
+}
+
+/* Hide arrows on desktop devices */
+@media only screen and (min-width: 1024px) {
+    #splide-1 .splide__arrow,
+    #splide-2 .splide__arrow {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1023px) {
+    #splide-1 .splide__arrow {
+        display: none;
+    }
 }

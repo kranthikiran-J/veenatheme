@@ -18,7 +18,10 @@
     position: absolute;
     overflow: hidden;
   
-    animation: marquee 15s linear infinite;
+    animation: marquee 8s linear infinite;
+  }
+  .category-collection{
+    margin-right: 20px;
   }
   
   .custome-marquee span {
@@ -36,11 +39,14 @@
   /*   font-style; */
   /*   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000; */
     text-align:center;
+    width: auto;
      
     
   }
   span img{
     margin-right: 10px;
+    width: 450px;
+    
   }
   .explore-btn{
     background-color: transparent;
@@ -69,6 +75,10 @@
       border-radius:18px;
       background:transparent;
     }
+    .category-container{
+      display: flex;
+    align-items: center;
+    }
   
   @keyframes marquee {
     0% { left: 0; }
@@ -93,4 +103,8 @@
   }
 
 
+
+
+
+  
 
