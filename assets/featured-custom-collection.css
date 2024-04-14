@@ -224,17 +224,32 @@
 #splide-2 .splide__arrow {
     top: -28px; /* Adjust as needed */
     bottom: unset;
+    width: 34px;
+    height: 34px;
+    border-radius:  50px 0 0 50px;
+    background-color: #ff0000;
+        color: #FFFFFF;
 
 }
 /* Adjust the position of the arrows for the second row */
 #splide-2 .splide__arrow--prev {
     left: 0px; /* Adjust as needed */
     right: unset;
+    width: 34px;
+    height: 34px;
+    border-radius:  50px 0 0 50px;
+    background-color: #ff0000;
+        color: #FFFFFF;
 }
 
 #splide-2 .splide__arrow--next {
     right: 0px; /* Adjust as needed */
     left: unset;
+    width: 34px;
+    height: 34px;
+    border-radius:  50px 0 0 50px;
+    background-color: #ff0000;
+        color: #FFFFFF;
 }
 
 /* Hide arrows on desktop devices */
@@ -242,10 +257,36 @@
     #splide-1 .splide__arrow,
     #splide-2 .splide__arrow {
         display: none;
+        width: 34px;
+        height: 34px;
+        border-radius:  50px 0 0 50px;
+        background-color: #ff0000;
+        color: #FFFFFF;
     }
 }
 @media only screen and (max-width: 1023px) {
     #splide-1 .splide__arrow {
         display: none;
+        width: 34px;
+        height: 34px;
+        border-radius:  50px 0 0 50px;
+        background-color: #ff0000;
+                color: #FFFFFF;
     }
 }
+/* Customize arrow styles */
+.splide__arrow {
+    width: 34px;
+    height: 34px;
+    border-radius: 50px 0 0 50px;
+    background-color: #ff0000;
+    fill: #FFFFFF;
+    /* Add other styles as needed */
+}
+.splide__arrow svg {
+    fill: white !important;
+    height: 1.2em;
+    width: 1.2em;
+}
+
+
