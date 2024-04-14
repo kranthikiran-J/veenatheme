@@ -3,7 +3,7 @@
 {% comment %} {{ 'new-collection.svg' | asset_url }}
 {{ 'new-clothing-collection.svg' | asset_url }} {% endcomment %}
 
-<div class="custome-marquee">
+{% comment %} <div class="custome-marquee">
   
 
     <div>
@@ -43,8 +43,45 @@
       {% comment %} <a><button class="explore">EXPLORE</button></a> {% endcomment %}
     {% endfor %}
   
+  </div>
+</div>  {% endcomment %}
+
+
+<div class="custome-marquee">
+  
+
+  <div>
+    
+    <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
+    <a><button class="explore-btn">EXPLORE</button></a>
+
+    <span><img src="{{ 'new-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>NEW COLLECTION</span>
+    <a><button class="grab-this-offer-btn">GRAB THIS OFFER</button></a>
+
+    <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span>
+    <a><button class="explore">EXPLORE</button></a> 
+
+    <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
+    {% comment %} <div class="category-container"></div> {% endcomment %}
+    {% comment %} <span><img src="{{ block.settings.image_picker | image_url }}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span> {% endcomment %}
+    <a><button class="explore-btn">EXPLORE</button></a>
+
+    {% comment %} <a class="explore-btn" href="{{ block.settings.button_link }}"><span>{{ block.settings.button_label }}</span></a> {% endcomment %}
+    <span><img src="{{ 'new-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>NEW COLLECTION</span>
+    {% comment %} <span><img src="{{ block.settings.image_picker | image_url }}" alt="New Collection" width=20 height=20>NEW COLLECTION</span> {% endcomment %}
+    <a><button class="grab-this-offer-btn">GRAB THIS OFFER</button></a>
+
+    {% comment %} <a class="grab-this-offer-btn" href="{{ block.settings.button_link }}"><span>{{ block.settings.button_label }}</span></a> {% endcomment %}
+    {% comment %} <div style="display: flex; align-items: center; margin-right:10px"> {% endcomment %}
+    <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span>
+    {% comment %} <span><img src="{{ block.settings.image_picker | image_url }}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span> {% endcomment %}
+    {% comment %} <a class="explore" href="{{ block.settings.button_link }}"><span>{{ block.settings.button_label }}</span></a> {% endcomment %}
+
+    <a><button class="explore">EXPLORE</button></a>
+  {% comment %} </div> {% endcomment %}
+
 </div>
-  </div>    
+</div> 
 
   {% comment %} {% schema %}
   {
