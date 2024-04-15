@@ -1,15 +1,12 @@
 {{ 'marquee-collections.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'marquee-collections.js' | asset_url }}" defer></script>
-{% comment %} {{ 'new-collection.svg' | asset_url }}
-{{ 'new-clothing-collection.svg' | asset_url }} {% endcomment %}
 
-{% comment %} <div class="custome-marquee">
-  
 
+<div class="custome-marquee">
     <div>
-      {% for block in section.blocks %}
+      
         
-      {% comment %} <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
+      <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
       <a><button class="explore-btn">EXPLORE</button></a>
       
       <span><img src="{{ 'new-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>NEW COLLECTION</span>
@@ -17,73 +14,23 @@
 
       
       <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span>
-      <a><button class="explore">EXPLORE</button></a> {% endcomment %}
+      <a><button class="explore">EXPLORE</button></a>
 
       
-      
-      {% comment %} <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span> {% endcomment %}
-      <div class="category-container"></div>
-      <span><img src="{{ block.settings.image_picker | image_url }}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
-      {% comment %} <a><button class="explore-btn">EXPLORE</button></a> {% endcomment %}
-      <a class="explore-btn" href="{{ block.settings.button_link }}"><span>{{ block.settings.button_label }}</span></a>
-
+      <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
+      <a><button class="explore-btn">EXPLORE</button></a>
 
             
-      {% comment %} <span><img src="{{ 'new-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>NEW COLLECTION</span> {% endcomment %}
-      <span><img src="{{ block.settings.image_picker | image_url }}" alt="New Collection" width=20 height=20>NEW COLLECTION</span>
-      {% comment %} <a><button class="grab-this-offer-btn">GRAB THIS OFFER</button></a> {% endcomment %}
-      <a class="grab-this-offer-btn" href="{{ block.settings.button_link }}"><span>{{ block.settings.button_label }}</span></a>
-
+      <span><img src="{{ 'new-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>NEW COLLECTION</span>
+      <a><button class="grab-this-offer-btn">GRAB THIS OFFER</button></a>
 
       
-      {% comment %} <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span> {% endcomment %}
-      <span><img src="{{ block.settings.image_picker | image_url }}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span>
-      <a class="explore" href="{{ block.settings.button_link }}"><span>{{ block.settings.button_label }}</span></a>
-
-      {% comment %} <a><button class="explore">EXPLORE</button></a> {% endcomment %}
-    {% endfor %}
-  
-  </div>
-</div>  {% endcomment %}
-
-
-<div class="custome-marquee">
-  
-
-  <div>
-    
-    <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
-    <a><button class="explore-btn">EXPLORE</button></a>
-
-    <span><img src="{{ 'new-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>NEW COLLECTION</span>
-    <a><button class="grab-this-offer-btn">GRAB THIS OFFER</button></a>
-
-    <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span>
-    <a><button class="explore">EXPLORE</button></a> 
-
-    <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
-    {% comment %} <div class="category-container"></div> {% endcomment %}
-    {% comment %} <span><img src="{{ block.settings.image_picker | image_url }}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span> {% endcomment %}
-    <a><button class="explore-btn">EXPLORE</button></a>
-
-    {% comment %} <a class="explore-btn" href="{{ block.settings.button_link }}"><span>{{ block.settings.button_label }}</span></a> {% endcomment %}
-    <span><img src="{{ 'new-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>NEW COLLECTION</span>
-    {% comment %} <span><img src="{{ block.settings.image_picker | image_url }}" alt="New Collection" width=20 height=20>NEW COLLECTION</span> {% endcomment %}
-    <a><button class="grab-this-offer-btn">GRAB THIS OFFER</button></a>
-
-    {% comment %} <a class="grab-this-offer-btn" href="{{ block.settings.button_link }}"><span>{{ block.settings.button_label }}</span></a> {% endcomment %}
-    {% comment %} <div style="display: flex; align-items: center; margin-right:10px"> {% endcomment %}
-    <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span>
-    {% comment %} <span><img src="{{ block.settings.image_picker | image_url }}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span> {% endcomment %}
-    {% comment %} <a class="explore" href="{{ block.settings.button_link }}"><span>{{ block.settings.button_label }}</span></a> {% endcomment %}
-
-    <a><button class="explore">EXPLORE</button></a>
-  {% comment %} </div> {% endcomment %}
-
-</div>
-</div> 
-
-  {% comment %} {% schema %}
+      <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span>
+      <a><button class="explore">EXPLORE</button></a>
+         
+     </div>
+  </div>      
+{% schema %}
   {
     "name": "Marquee collection section",
     "tag": "section",
@@ -134,108 +81,5 @@
       }
     ]
   }
-  {% endschema %} {% endcomment %}
+  {% endschema %} 
 
-  {% schema %}
-{
-  "name": "Sliding Text",
-  "settings": [
-    {
-      "type": "color",
-      "id": "bg_color",
-      "label": "Background Color"
-    },
-    {
-      "type": "range",
-      "id": "padding",
-      "min": 0,
-      "max": 50,
-      "step": 1,    
-      "unit": "px",
-      "label": "Padding from top and bottom",
-      "default": 16
-    },
-    {
-      "type": "text",
-      "label": "Scroll Time",
-      "id": "scroll_time",
-      "default": "50"
-    },
-    {
-      "type": "color",
-      "id": "font_color",
-      "label": "Font color",
-      "default": "#000000"
-    },
-    {
-      "type": "range",
-      "id": "font_size",
-      "min": 8,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "label": "Font size",
-      "default": 80
-    },
-    {
-      "type": "select",
-      "id": "pause_text",
-      "label": "Pause text on mouse hover",
-      "options": [
-        {
-          "value": "paused",
-          "label": "Yes"
-        },
-        {
-          "value": "initial",
-          "label": "No"
-        }
-      ],
-      "default": "initial"
-    }
-  ],
-  "blocks": [
-    {
-      "name": "Sliding text",
-      "type": "block",
-      "settings": [
-        
-    {
-      "type": "image_picker",
-      "id": "image_picker",
-      "label": "Pick category image"
-    },
-        {
-          "type": "text",
-          "label": "Add Text",
-          "id": "text"
-        },
-        {
-          "type": "checkbox",
-          "id": "checkbox",
-          "label": "Text-outline",
-          "default": false,
-          "info": "Make your text visible by outline"
-        },
-        {
-            "type": "text",
-            "id": "button_label",
-            "label": "Button label",
-            "default": "See All Product"
-            
-        },
-        {
-                "type": "url",
-                "id": "button_link",
-                "label": "Button url"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Sliding Text"
-    }
-  ]
-}
-{% endschema %}

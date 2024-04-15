@@ -281,23 +281,7 @@
                 {% unless colorOption %}
                     <p>No color variants available</p>
                 {% endunless %} {% endcomment %}
-                {% assign colorOption = false %}
-                {% for variant in product.variants %}
-                    {% if variant.option1 == 'Color' %}
-                        {% assign colorOption = true %}
-                        <div class="color-variants">
-                            <p>Select Color:</p>
-                            {% for value in variant.option2 %}
-                                <input type="radio" id="color-{{ variant.id }}-{{ value | handle }}" name="color-{{ product.id }}" value="{{ value }}" {% if forloop.first %}checked{% endif %}>
-                                <label for="color-{{ variant.id }}-{{ value | handle }}" style="background-color: {{ value }};"></label>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                {% endfor %}
-
-                {% unless colorOption %}
-                    <p>No color variants available</p>
-                {% endunless %}
+             
         
                                 <p class="vendor-name">{{ product.vendor }}</p>
                                 <h3 class="product-name">{{ product.title }}</h3>
@@ -344,7 +328,7 @@
                             <a href="{{ product.url }}" class="quick-look-tag">Quick Look</a> <!-- Quick Look tag -->
         
                             <div class="product-container-details">
-                                {% assign colorOption = false %}
+                                {% comment %} {% assign colorOption = false %}
                                 {% for option in product.options %}
                                     {% if option.name == 'Color' %}
                                         {% assign colorOption = true %}
@@ -359,7 +343,7 @@
                                         </div>
                                     {% endif %}
                                 
-                                {% endfor %}
+                                {% endfor %} {% endcomment %}
                 
                 {% comment %} {% unless colorOption %}
                     <p>No color variants available</p>

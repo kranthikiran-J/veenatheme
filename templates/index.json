@@ -262,6 +262,40 @@
         "padding_bottom": 36
       }
     },
+    "men_women_image_with_text_dMJwm6": {
+      "type": "men-women-image-with-text",
+      "blocks": {
+        "custom_block_AVxP49": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Rectangle_55_e3b6bc5f-3d8f-4f17-8edf-6527d3cacf31.webp",
+            "image_mobile": "shopify:\/\/shop_images\/Rectangle_55_e3b6bc5f-3d8f-4f17-8edf-6527d3cacf31.webp",
+            "pre_heading": "Men's",
+            "title": "<p>Introducing Our Distinguished Men's Clothing Collection<\/p>",
+            "button_label": "Explore",
+            "button_link": ""
+          }
+        },
+        "custom_block_Rx8W7E": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Rectangle_56_cfe99a12-1d6c-471e-960a-d79e80c354a9.webp",
+            "image_mobile": "shopify:\/\/shop_images\/Rectangle_56_cfe99a12-1d6c-471e-960a-d79e80c354a9.webp",
+            "pre_heading": "Women's",
+            "title": "<p>Elevate Your Wardrobe With Our Women's Clothing Collection<\/p>",
+            "button_label": "Explore",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_AVxP49",
+        "custom_block_Rx8W7E"
+      ],
+      "settings": {
+        "heading": "Business Formal Choices"
+      }
+    },
     "multicolumn_hWaNxM": {
       "type": "multicolumn",
       "blocks": {
@@ -290,6 +324,7 @@
         "column_xdphTf",
         "column_m4cFny"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -352,6 +387,7 @@
     },
     "featured_collection_imMMpH": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured collection",
         "heading_size": "h1",
@@ -376,6 +412,15 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "featured_custom_collection_6PTxhj": {
+      "type": "featured-custom-collection",
+      "settings": {
+        "heading": "Featured Collection",
+        "collection": "featured-collections",
+        "button_label": "See All Product",
+        "button_link": ""
       }
     },
     "multicolumn_qC8g6g": {
@@ -497,6 +542,43 @@
         "padding_bottom": 36
       }
     },
+    "bottom_banner_bzRPWr": {
+      "type": "bottom-banner",
+      "blocks": {
+        "custom_block_G8JPKF": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/banner-content-img_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/4_0d5cc573-820a-4e7b-8f22-af8438216522.png",
+            "pre_heading": "Introduce",
+            "title": "<h3>We Believe in the Power of Fashion<\/h3>",
+            "description": "<p>fashion emerges as the universal language that speaks volumes without words.<\/p>",
+            "button_label": "Show More",
+            "button_link": ""
+          }
+        },
+        "custom_block_AEz6P9": {
+          "type": "custom-block",
+          "disabled": true,
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Rectangle_4265.webp",
+            "image_mobile": "shopify:\/\/shop_images\/Rectangle_4265.webp",
+            "pre_heading": "Fashion",
+            "title": "<h3>Women's Sustainable Style Hub<\/h3>",
+            "description": "<p>Business Formal Choices<\/p>",
+            "button_label": "Explore",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_G8JPKF",
+        "custom_block_AEz6P9"
+      ],
+      "settings": {
+        "heading": "Business Formal Choices"
+      }
+    },
     "image_banner_93WaxV": {
       "type": "image-banner",
       "blocks": {
@@ -531,6 +613,7 @@
         "text_f3kgDB",
         "buttons_83BHzF"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/4_0d5cc573-820a-4e7b-8f22-af8438216522.webp",
         "image_overlay_opacity": 0,
@@ -650,43 +733,6 @@
         "padding_bottom": 36
       }
     },
-    "bottom_banner_bzRPWr": {
-      "type": "bottom-banner",
-      "blocks": {
-        "custom_block_G8JPKF": {
-          "type": "custom-block",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/banner-content-img_1.png",
-            "image_mobile": "shopify:\/\/shop_images\/4_0d5cc573-820a-4e7b-8f22-af8438216522.png",
-            "pre_heading": "Introduce",
-            "title": "<h3>We Believe in the Power of Fashion<\/h3>",
-            "description": "<p>fashion emerges as the universal language that speaks volumes without words.<\/p>",
-            "button_label": "Show More",
-            "button_link": ""
-          }
-        },
-        "custom_block_AEz6P9": {
-          "type": "custom-block",
-          "disabled": true,
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Rectangle_4265.webp",
-            "image_mobile": "shopify:\/\/shop_images\/Rectangle_4265.webp",
-            "pre_heading": "Fashion",
-            "title": "<h3>Women's Sustainable Style Hub<\/h3>",
-            "description": "<p>Business Formal Choices<\/p>",
-            "button_label": "Explore",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "custom_block_G8JPKF",
-        "custom_block_AEz6P9"
-      ],
-      "settings": {
-        "heading": "Business Formal Choices"
-      }
-    },
     "history_of_durex_A8qeVU": {
       "type": "history-of-durex",
       "blocks": {
@@ -761,106 +807,14 @@
         "heading": "History of Durex"
       }
     },
-    "men_women_image_with_text_dMJwm6": {
-      "type": "men-women-image-with-text",
-      "blocks": {
-        "custom_block_AVxP49": {
-          "type": "custom-block",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Rectangle_55_e3b6bc5f-3d8f-4f17-8edf-6527d3cacf31.webp",
-            "image_mobile": "shopify:\/\/shop_images\/Rectangle_55_e3b6bc5f-3d8f-4f17-8edf-6527d3cacf31.webp",
-            "pre_heading": "Men's",
-            "title": "<p>Introducing Our Distinguished Men's Clothing Collection<\/p>",
-            "button_label": "Explore",
-            "button_link": ""
-          }
-        },
-        "custom_block_Rx8W7E": {
-          "type": "custom-block",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Rectangle_56_cfe99a12-1d6c-471e-960a-d79e80c354a9.webp",
-            "image_mobile": "shopify:\/\/shop_images\/Rectangle_56_cfe99a12-1d6c-471e-960a-d79e80c354a9.webp",
-            "pre_heading": "Women's",
-            "title": "<p>Elevate Your Wardrobe With Our Women's Clothing Collection<\/p>",
-            "button_label": "Explore",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "custom_block_AVxP49",
-        "custom_block_Rx8W7E"
-      ],
-      "settings": {
-        "heading": "Business Formal Choices"
-      }
-    },
     "marquee_collections_P48j3G": {
       "type": "marquee-collections",
       "settings": {
-        "bg_color": "",
-        "padding": 16,
-        "scroll_time": "50",
-        "font_color": "#000000",
-        "font_size": 80,
-        "pause_text": "initial"
-      }
-    },
-    "featured_custom_collection_6PTxhj": {
-      "type": "featured-custom-collection",
-      "settings": {
-        "heading": "Featured Collection",
-        "collection": "featured-collections",
-        "button_label": "See All Product",
-        "button_link": ""
       }
     },
     "marquee_collections_XrirVz": {
       "type": "marquee-collections",
-      "blocks": {
-        "block_ERbV8j": {
-          "type": "block",
-          "settings": {
-            "image_picker": "shopify:\/\/shop_images\/svgviewer-output_1.svg",
-            "text": "NEW COLLECTION",
-            "checkbox": false,
-            "button_label": "GRAB THIS OFFER",
-            "button_link": ""
-          }
-        },
-        "block_GUYgmr": {
-          "type": "block",
-          "settings": {
-            "image_picker": "shopify:\/\/shop_images\/svgviewer-output.svg",
-            "text": "MEN'S CLOTHING COLLECTION",
-            "checkbox": false,
-            "button_label": "EXPLORE",
-            "button_link": ""
-          }
-        },
-        "block_DWQHWA": {
-          "type": "block",
-          "settings": {
-            "image_picker": "shopify:\/\/shop_images\/svgviewer-output.svg",
-            "text": "WOMEN'S CLOTHING COLLECTION",
-            "checkbox": false,
-            "button_label": "EXPLORE",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "block_ERbV8j",
-        "block_GUYgmr",
-        "block_DWQHWA"
-      ],
       "settings": {
-        "bg_color": "",
-        "padding": 25,
-        "scroll_time": "100",
-        "font_color": "#000000",
-        "font_size": 80,
-        "pause_text": "initial"
       }
     }
   },
@@ -870,20 +824,20 @@
     "multicolumn_Fkw7dF",
     "collection_list_33Cpd6",
     "collection_list_zfnFyy",
+    "men_women_image_with_text_dMJwm6",
     "multicolumn_hWaNxM",
     "multicolumn_9VgD6L",
     "featured_collection_imMMpH",
+    "featured_custom_collection_6PTxhj",
     "multicolumn_qC8g6g",
     "multicolumn_DfgpPc",
+    "bottom_banner_bzRPWr",
     "image_banner_93WaxV",
     "featured_blog_V4YeAM",
     "featured_blog_hxF6Bn",
     "collapsible_content_Vhc64a",
-    "bottom_banner_bzRPWr",
     "history_of_durex_A8qeVU",
-    "men_women_image_with_text_dMJwm6",
     "marquee_collections_P48j3G",
-    "featured_custom_collection_6PTxhj",
     "marquee_collections_XrirVz"
   ]
 }
