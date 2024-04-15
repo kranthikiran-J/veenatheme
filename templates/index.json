@@ -262,6 +262,12 @@
         "padding_bottom": 36
       }
     },
+    "marquee_collections_P48j3G": {
+      "type": "marquee-collections",
+      "settings": {
+        "heading": "Marquee Collections"
+      }
+    },
     "men_women_image_with_text_dMJwm6": {
       "type": "men-women-image-with-text",
       "blocks": {
@@ -807,14 +813,11 @@
         "heading": "History of Durex"
       }
     },
-    "marquee_collections_P48j3G": {
-      "type": "marquee-collections",
-      "settings": {
-      }
-    },
     "marquee_collections_XrirVz": {
       "type": "marquee-collections",
+      "disabled": true,
       "settings": {
+        "heading": "Marquee Collections"
       }
     }
   },
@@ -824,6 +827,7 @@
     "multicolumn_Fkw7dF",
     "collection_list_33Cpd6",
     "collection_list_zfnFyy",
+    "marquee_collections_P48j3G",
     "men_women_image_with_text_dMJwm6",
     "multicolumn_hWaNxM",
     "multicolumn_9VgD6L",
@@ -837,7 +841,6 @@
     "featured_blog_hxF6Bn",
     "collapsible_content_Vhc64a",
     "history_of_durex_A8qeVU",
-    "marquee_collections_P48j3G",
     "marquee_collections_XrirVz"
   ]
 }
