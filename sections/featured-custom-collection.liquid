@@ -16,6 +16,7 @@
     }
     document.addEventListener('DOMContentLoaded', function () {
 
+   
 
         {% comment %} var productItems = document.querySelectorAll('.product-container-item');
 
@@ -270,28 +271,7 @@
                                             <div class="radio" style="background-color:{{eachcolor}};display:block;" data-images="{{ product.images[val].src |image_url }}" data-imageindex="{{ forloop.parentloop.index }}"></div>
                                         </div>
                                     {% endfor %}
-                                </div>
-                                {% comment %} {% assign colorOption = false %}
-                                {% for option in product.options %}
-                                    {% if option.name == 'Color' %}
-                                        {% assign colorOption = true %}
-                                        <div class="color-variants">
-                                            <p>Select Color:</p>
-                                            {% for variant in product.variants %}
-                                                {% if variant.option1 == option.values[0] %}
-                                                    <input type="radio" id="color-{{ variant.id }}" name="color-{{ product.id }}" value="{{ variant.option1 }}" {% if forloop.first %}checked{% endif %}>
-                                                    <label for="color-{{ variant.id }}" style="background-color: {{ variant.option1 }};"></label>
-                                                {% endif %}
-                                            {% endfor %}
-                                        </div>
-                                    {% endif %}
-                                
-                                {% endfor %}
-                
-                {% unless colorOption %}
-                    <p>No color variants available</p>
-                {% endunless %} {% endcomment %}
-             
+                                </div>             
         
                                 <p class="vendor-name">{{ product.vendor }}</p>
                                 <h3 class="product-name">{{ product.title }}</h3>
@@ -318,7 +298,7 @@
                 {% assign collection = collections[section.settings.collection] %}
                 {% if collection %}
                     {% for product in collection.products limit:4 offset:4 %}
-                        <li class="splide__slide product-container-item" onmouseover="showSecondImage(this)" onmouseout="showFirstImage(this)">
+                        <li class="splide__slide product-container-item" >
                             {% if product.tags contains 'New' %}
                                 <div class="tag new-tag">New</div> <!-- New tag -->
                             {% endif %}
@@ -331,8 +311,8 @@
                             {% endif %}
                             {% comment %} <div class="tag new-tag">New</div> <!-- New tag --> {% endcomment %}
                             {% comment %} <img class="product-img" src="{{ product.featured_image.src | image_url }}" alt="{{ product.title }}" width=300 height=300/> {% endcomment %}
-                            <div class="image-container" >
-                                <img class="product-img" src="{{ product.images[0].src | image_url }}" alt="{{ product.title }}" width=300 height=300/>
+                            <div class="image-container" onmouseover="showSecondImage(this)" onmouseout="showFirstImage(this)" >
+                                <img class="product-img get-img-2" src="{{ product.images[0].src | image_url }}" alt="{{ product.title }}" width=300 height=300/>
                                 <img class="product-img second-image" src="{{ product.images[1].src | image_url }}" alt="{{ product.title }}" width=300 height=300/>
                             </div>
                             <a href="{{ product.url }}" class="quick-look-tag">Quick Look</a> <!-- Quick Look tag -->
@@ -342,7 +322,7 @@
                                     {% for eachcolor in product.options_by_name['Color'].values %}
                                         {% assign val = forloop.index %}
                                         <div class="outer-radio" style="display:block;">
-                                            <div class="radio" style="background-color:{{eachcolor}};display:block;" data-images="{{ product.images[val].src |image_url }}" data-imageindex="{{ forloop.parentloop.index }}"></div>
+                                            <div class="radio-1" style="background-color:{{eachcolor}};display:block;" data-images="{{ product.images[val].src |image_url }}" data-imageindex="{{ forloop.parentloop.index }}"></div>
                                         </div>
                                     {% endfor %}
                                 </div>

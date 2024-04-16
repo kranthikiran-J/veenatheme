@@ -4,9 +4,17 @@
 
 <div class="custome-marquee">
     <div>
+
+      {% for block in section.blocks %}
+        {% assign image_url = block.settings.image_collection | image_url  %}
+        {% if image_url %}
+          <span><img src="{{ image_url |image_url }}" alt="{{ block.settings.pre_heading }}" width="20" height="20">{{ block.settings.pre_heading }}</span>
+        {% endif %}
+        <a href="{{ block.settings.button_link }}"><button class="{% if block.settings.button_label == 'EXPLORE' %}explore-btn{% elsif block.settings.button_label == 'GRAB THIS OFFER' %}grab-this-offer-btn{% else %}explore{% endif %}">{{ block.settings.button_label }}</button></a>
+      {% endfor %}
       
-        
-      <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
+       
+      {% comment %} <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>WOMEN'S CLOTHING COLLECTION</span>
       <a><button class="explore-btn">EXPLORE</button></a>
       
       <span><img src="{{ 'new-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>NEW COLLECTION</span>
@@ -26,7 +34,7 @@
 
       
       <span><img src="{{ 'new-clothing-collection.svg' | asset_url}}" alt="New Collection" width=20 height=20>MEN'S CLOTHING COLLECTION</span>
-      <a><button class="explore">EXPLORE</button></a>
+      <a><button class="explore">EXPLORE</button></a> {% endcomment %}
          
      </div>
   </div>      
