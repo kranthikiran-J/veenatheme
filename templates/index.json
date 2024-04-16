@@ -853,6 +853,15 @@
       "settings": {
         "heading": "Marquee Collections"
       }
+    },
+    "custom_liquid_GgtpJT": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\np{\ntext-align:center;\n}\n<\/style>\n\n{% if customer %}\n  <p >Hi, {{ customer.first_name }}<\/p>\n{% else %}\n  <p>Please <a href=\"#\">login<\/a><\/p>\n{% endif %}\n{{customer}}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -875,6 +884,7 @@
     "featured_blog_hxF6Bn",
     "collapsible_content_Vhc64a",
     "history_of_durex_A8qeVU",
-    "marquee_collections_XrirVz"
+    "marquee_collections_XrirVz",
+    "custom_liquid_GgtpJT"
   ]
 }

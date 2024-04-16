@@ -258,8 +258,8 @@
                             {% comment %} <div class="tag new-tag">New</div> <!-- New tag --> {% endcomment %}
                             {% comment %} <img class="product-img" src="{{ product.featured_image.src | image_url }}" alt="{{ product.title }}" width=300 height=300/> {% endcomment %}
                             <div class="image-container" onmouseover="showSecondImage(this)" onmouseout="showFirstImage(this)">
-                                <img class="product-img get-img" src="{{ product.images[0].src | image_url }}" alt="{{ product.title }}" width=300 height=300/>
-                                <img class="product-img second-image" src="{{ product.images[1].src | image_url }}" alt="{{ product.title }}" width=300 height=300/>
+                                <img class="product-img get-img" src="{{ product.images[1].src | image_url }}" alt="{{ product.title }}" width=300 height=300/>
+                                <img class="product-img second-image" src="{{ product.images[0].src | image_url }}" alt="{{ product.title }}" width=300 height=300/>
                             </div>
                             <a href="{{ product.url }}" class="quick-look-tag">Quick Look</a> <!-- Quick Look tag -->
         
@@ -312,8 +312,8 @@
                             {% comment %} <div class="tag new-tag">New</div> <!-- New tag --> {% endcomment %}
                             {% comment %} <img class="product-img" src="{{ product.featured_image.src | image_url }}" alt="{{ product.title }}" width=300 height=300/> {% endcomment %}
                             <div class="image-container" onmouseover="showSecondImage(this)" onmouseout="showFirstImage(this)" >
-                                <img class="product-img get-img-2" src="{{ product.images[0].src | image_url }}" alt="{{ product.title }}" width=300 height=300/>
-                                <img class="product-img second-image" src="{{ product.images[1].src | image_url }}" alt="{{ product.title }}" width=300 height=300/>
+                                <img class="product-img get-img-2" src="{{ product.images[1].src | image_url }}" alt="{{ product.title }}" width=300 height=300/>
+                                <img class="product-img second-image" src="{{ product.images[0].src | image_url }}" alt="{{ product.title }}" width=300 height=300/>
                             </div>
                             <a href="{{ product.url }}" class="quick-look-tag">Quick Look</a> <!-- Quick Look tag -->
         
