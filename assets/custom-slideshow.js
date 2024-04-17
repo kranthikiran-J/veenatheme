@@ -14,3 +14,4 @@ class CustomSlider extends HTMLElement {
   }
   
   customElements.define("splider-component", CustomSlider);
+  window.CustomSlider=CustomSlider

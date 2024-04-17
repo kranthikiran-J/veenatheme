@@ -1,0 +1,320 @@
+{{ "custom-testimonials.css" | asset_url | stylesheet_tag}}
+<script src="{{ "custom-slideshow.js"  | asset_url}}" defer=false> </script>
+{% comment %} {{ 'custom-sildeshow.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% assign fontFamily = "'Inter', sans-serif" %}
+
+{% style %}
+ body {
+    font-family: {{ fontFamily }};
+  }
+.custom-testimonials--{{ section.id }}{
+    background-color: {{ section.settings.section_background }};
+    padding-top : {{ section.settings.padding_top | divided_by :2 }}px;
+    padding-bottom : {{ section.settings.padding_bottom | divided_by :2 }}px;
+
+
+}
+.main-image {
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+    border: none;
+
+}
+
+.custom-testimonials--{{ section.id }} {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 50px;
+    }
+
+    .custom-testimonials--{{ section.id }} .main-image-section {
+        flex: 1;
+        margin-right: 20px;
+        justify-content:center;
+    }
+
+    .custom-testimonials--{{ section.id }} .testimonial-section {
+        flex: 1;
+    }
+    .main-image-section {
+    flex: 1 1 50%; /* Set flex-grow, flex-shrink, and flex-basis */
+    max-width: 50%; /* Set maximum width */
+    overflow: hidden; /* Hide any content that exceeds the container */
+}
+
+.testimonial-section {
+    flex: 1;
+    margin: 0 20px; /* Add margin on both sides to create space between content and screen */
+}
+    .main-image {
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+   
+}
+
+@media screen and (max-width:749px){
+    .custom-testimonials--{{ section.id }}{
+    padding-top : {{ section.settings.padding_top }}px;
+    padding-bottom : {{ section.settings.padding_bottom }}px;
+    flex-direction:column;
+    
+}
+.testimonial-title{
+    color: #000;
+    font-weight: 500;
+    font-size: 28px;
+    }
+    .main-image-section {
+    width:100%;
+    align-self:center;
+}
+.description{
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+    width: 350px;
+    height: 42px;
+}
+
+
+}
+
+{% endstyle %}
+
+
+  
+ {%- capture options -%}
+{
+  "pagination": {{ section.settings.show_pagination }} ,
+  "type": "{{ section.settings.Slide_animation }}" ,
+  "arrows": {{ section.settings.show_arrows }},
+  "autoplay" : {{ section.settings.auto_play }}
+}
+{% endcapture %}
+{% comment %} <div class='custom-testimonials--{{ section.id }}' >
+<splider-component class="splide" data-options='{{ options }}'>
+    <div class="splide__track">
+        <ul class="splide__list">
+            {% for block in section.blocks %}
+                <li class="splide__slide">
+                    <div class="testimonial">
+                        {% if block.settings.testimonial_text %}
+                            <div class="testimonial-text">{{ block.settings.testimonial_text }}</div>
+                        {% endif %}
+                        {% if block.settings.author_image %}
+                            <img src="{{ block.settings.author_image | image_url }}" width=50 height=50 alt="Author Image">
+                        {% endif %}
+                        {% if block.settings.author_name %}
+                            <div class="author-name">{{ block.settings.author_name }}</div>
+                        {% endif %}
+                        {% if block.settings.author_title %}
+                            <div class="author-title">{{ block.settings.author_title }}</div>
+                        {% endif %}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</splider-component>
+</div> {% endcomment %}
+
+<div class='custom-testimonials--{{ section.id }}' >
+
+    <div class="main-image-section">
+    <splider-component class="splide splide-main" data-options='{{ options }}'>
+        <div class="splide__track">
+            <ul class="splide__list">
+                {% for block in section.blocks %}
+                    <li class="splide__slide">
+                        {% if block.settings.main_image %}
+                            <img src="{{ block.settings.main_image | image_url }}" class="main-image" width=200 height=200 alt="Main Image">
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </splider-component>
+    </div>
+
+
+
+    <div class="testimonial-section">
+
+{% comment %} <div class='custom-testimonials--{{ section.id }}' > {% endcomment %}
+    <div class="section-content">
+        <h2 class="testimonial-title">{{ section.settings.heading }}</h2>
+        <div class="description">{{ section.settings.description }}</div>
+    </div>
+    <splider-component class="splide splide-author" data-options='{{ options }}'>
+        <div class="splide__track">
+            <ul class="splide__list">
+                {% for block in section.blocks %}
+                    <li class="splide__slide">
+                        <div class="testimonial">
+                            {% if block.settings.testimonial_text %}
+                                <div class="testimonial-text">{{ block.settings.testimonial_text }}</div>
+                            {% endif %}
+                            <div class="author-info-container">
+                            {% if block.settings.author_image %}
+                                <img src="{{ block.settings.author_image | image_url }}" class="author-image" width=50 height=50 alt="Author Image">
+                            {% endif %}
+                            <div class="author-details">
+                            {% if block.settings.author_name %}
+                                <div class="author-name">{{ block.settings.author_name }}</div>
+                            {% endif %}
+                            {% if block.settings.author_title %}
+                                <div class="author-title">{{ block.settings.author_title }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </splider-component>
+{% comment %} </div> {% endcomment %}
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Main Image Slider
+        var splideMain = new Splide('.splide-main', {
+            type : "fade",
+            {% comment %} fade: true, {% endcomment %}
+            rewind: "true",
+            
+        });
+        
+        // Author Information Slider
+        var splideAuthor = new Splide('.splide-author', {
+            type: 'slide',
+            rewind: "true",
+            perPage:1,
+        });
+
+        // Mount both sliders
+        splideMain.mount();
+        splideAuthor.mount();
+        splideMain.sync(splideAuthor);
+        splideAuthor.sync(splideMain);
+    });
+</script>
+{% comment %} <script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+      var splide = new Splide( '.splide' );
+      splide.mount();
+    } );
+  </script>  {% endcomment %}
+
+{% schema %}
+{
+    "name":"custom testimonials",
+    "tag":"section",
+    "class":"Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "placeholder": "Heading",
+            "default": "NEW ARRIVALS"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description",
+            "default": "<p>Testimonials Description</p>"
+           },
+           {
+            "type": "color",
+            "id": "section_background",
+            "label": "Section Background",
+            "default": "#ffffff"
+          },
+        {
+            "type": "header",
+            "content": "Section padding"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "label": "Padding Top",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "label": "Padding Bottom",
+            "default": 0
+        }
+    ],
+    "blocks": [
+        {
+        "type": "slide",
+        "name": "slide",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Customization options"
+          },
+          {
+            "type": "color",
+            "id": "active_card_bg_color",
+            "label": "Background color for Active Card",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "card_bg_color",
+            "label": "Background color for Card",
+            "default": "#f2f2f2"
+          },
+          {
+            "type": "richtext",
+            "id": "testimonial_text",
+            "label": "Testimonial Text",
+            "default": "<p>my testimonials</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "author_image",
+            "label": "Author Image"
+          },
+          {
+            "type": "text",
+            "id": "author_name",
+            "label": "Author Name",
+            "default": "John Doe"
+          },
+          {
+            "type": "text",
+            "id": "author_title",
+            "label": "Author Title",
+            "default": "CEO"
+          },
+          {
+            "type": "image_picker",
+            "id": "main_image",
+            "label": "Main Image"
+          }
+        ]
+    }
+    ],
+    "presets": [
+        {
+            "name":"custom testimonials"
+        }
+    ]
+}
+
+{% endschema %}

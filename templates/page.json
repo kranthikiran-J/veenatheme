@@ -158,14 +158,70 @@
         "custom_block_gpn7VH",
         "custom_block_FfcN6z"
       ],
+      "disabled": true,
       "settings": {
         "heading": "History of Durex"
+      }
+    },
+    "custom_testimonials_AgGHx9": {
+      "type": "custom-testimonials",
+      "blocks": {
+        "slide_GULVL9": {
+          "type": "slide",
+          "settings": {
+            "active_card_bg_color": "#f6ffc2",
+            "card_bg_color": "#f2f2f2",
+            "testimonial_text": "<p>“ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque  “<\/p>",
+            "author_image": "shopify:\/\/shop_images\/Rectangle_8_1.png",
+            "author_name": "Mr. John Doe",
+            "author_title": "Clients",
+            "main_image": "shopify:\/\/shop_images\/Rectangle_14.png"
+          }
+        },
+        "slide_ike8kh": {
+          "type": "slide",
+          "settings": {
+            "active_card_bg_color": "#f6ffc2",
+            "card_bg_color": "#ffffff",
+            "testimonial_text": "<p>“ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque  “<\/p>",
+            "author_image": "shopify:\/\/shop_images\/Rectangle_8.png",
+            "author_name": "Mr. John Doe",
+            "author_title": "Clients",
+            "main_image": "shopify:\/\/shop_images\/pexels-jane-trang-doan-1092730_fed4520c-eea3-4c9d-9e2f-63f90fa1d694.jpg"
+          }
+        },
+        "slide_qgid6W": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "active_card_bg_color": "#f6ffc2",
+            "card_bg_color": "#f2f2f2",
+            "testimonial_text": "<p>“ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque  “<\/p>",
+            "author_image": "shopify:\/\/shop_images\/Rectangle_8_1.png",
+            "author_name": "Mr. John Doe",
+            "author_title": "Clients",
+            "main_image": "shopify:\/\/shop_images\/Rectangle_14.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_GULVL9",
+        "slide_ike8kh",
+        "slide_qgid6W"
+      ],
+      "settings": {
+        "heading": "Testimonials",
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+        "section_background": "rgba(0,0,0,0)",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     }
   },
   "order": [
     "main",
     "history_of_durex_Ez9Bq8",
-    "history_of_d_FmtbdW"
+    "history_of_d_FmtbdW",
+    "custom_testimonials_AgGHx9"
   ]
 }

@@ -54,6 +54,7 @@
     },
     "custom_slideshow_BwhGzB": {
       "type": "custom-slideshow",
+      "disabled": true,
       "settings": {
         "auto_play": true,
         "show_pagination": true,
