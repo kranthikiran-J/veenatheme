@@ -325,28 +325,7 @@
                                             <div class="radio-1" style="background-color:{{eachcolor}};display:block;" data-images="{{ product.images[val].src |image_url }}" data-imageindex="{{ forloop.parentloop.index }}"></div>
                                         </div>
                                     {% endfor %}
-                                </div>
-                                {% comment %} {% assign colorOption = false %}
-                                {% for option in product.options %}
-                                    {% if option.name == 'Color' %}
-                                        {% assign colorOption = true %}
-                                        <div class="color-variants">
-                                            <p>Select Color:</p>
-                                            {% for variant in product.variants %}
-                                                {% if variant.option1 == option.values[0] %}
-                                                    <input type="radio" id="color-{{ variant.id }}" name="color-{{ product.id }}" value="{{ variant.option1 }}" {% if forloop.first %}checked{% endif %}>
-                                                    <label for="color-{{ variant.id }}" style="background-color: {{ variant.option1 }};"></label>
-                                                {% endif %}
-                                            {% endfor %}
-                                        </div>
-                                    {% endif %}
-                                
-                                {% endfor %} {% endcomment %}
-                
-                {% comment %} {% unless colorOption %}
-                    <p>No color variants available</p>
-                {% endunless %} {% endcomment %}
-        
+                                </div>      
                                 <p class="vendor-name">{{ product.vendor }}</p>
                                 <h3 class="product-name">{{ product.title }}</h3>
                                 <p class="price">
