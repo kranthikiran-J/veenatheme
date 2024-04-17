@@ -1,6 +1,5 @@
 {{ "custom-testimonials.css" | asset_url | stylesheet_tag}}
 <script src="{{ "custom-slideshow.js"  | asset_url}}" defer=false> </script>
-{% comment %} {{ 'custom-sildeshow.css' | asset_url | stylesheet_tag }} {% endcomment %}
 {% assign fontFamily = "'Inter', sans-serif" %}
 
 {% style %}
@@ -11,71 +10,139 @@
     background-color: {{ section.settings.section_background }};
     padding-top : {{ section.settings.padding_top | divided_by :2 }}px;
     padding-bottom : {{ section.settings.padding_bottom | divided_by :2 }}px;
-
-
-}
-.main-image {
-    max-width: 100%; /* Ensure the image does not exceed the container width */
-    height: auto; /* Maintain aspect ratio */
-    border: none;
-
-}
-
-.custom-testimonials--{{ section.id }} {
-        display: flex;
+    width:95%;
+    display: flex;
         flex-wrap: wrap;
-        margin: 50px;
-    }
-
-    .custom-testimonials--{{ section.id }} .main-image-section {
-        flex: 1;
-        margin-right: 20px;
+        flex-direction:row;
         justify-content:center;
-    }
+        align-items:center;
 
-    .custom-testimonials--{{ section.id }} .testimonial-section {
-        flex: 1;
-    }
-    .main-image-section {
-    flex: 1 1 50%; /* Set flex-grow, flex-shrink, and flex-basis */
-    max-width: 50%; /* Set maximum width */
-    overflow: hidden; /* Hide any content that exceeds the container */
+}
+.main-image-section {
+        width:50%;
+        /* margin-left:auto; */
+}
+.custom-testimonials--{{ section.id }} .splide {
+    width: 100%; 
+    margin: 0 auto; 
+}
+.custom-testimonials--{{ section.id }} .splide .splide__slide:nth-child(3) {
+    visibility:hidden;
 }
 
-.testimonial-section {
-    flex: 1;
-    margin: 0 20px; /* Add margin on both sides to create space between content and screen */
-}
-    .main-image {
-    max-width: 100%; /* Ensure the image does not exceed the container width */
-    height: auto; /* Maintain aspect ratio */
-   
-}
 
 @media screen and (max-width:749px){
     .custom-testimonials--{{ section.id }}{
     padding-top : {{ section.settings.padding_top }}px;
     padding-bottom : {{ section.settings.padding_bottom }}px;
-    flex-direction:column;
+    display: flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        width:95%;
     
+    }
+    .main-image-section {
+        width:70%;
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        margin: auto;
+        
+    }
+.main-image{
+    width: 300px;
+    /* height: auto; */
+    height: 300px;
+    max-width: 90%;
+    display:flex;
+        justify-content:center;
+        align-items:center;
+        margin:auto;
+
+}
+.testimonial-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    margin-right: 0px;
+}
+ .custom-testimonials {
+    width:300px;
+    /* margin-right: auto; */
+}
+.splide__track{
+    width:350px;
+} 
+.custom-testimonials--{{ section.id }} .splide__slide{
+ /* margin:auto; */
+ /* width:450px; */
+ margin-left:0;
 }
 .testimonial-title{
     color: #000;
     font-weight: 500;
     font-size: 28px;
+    /* width:200px; */
+    text-align:center;
     }
-    .main-image-section {
-    width:100%;
-    align-self:center;
-}
 .description{
     font-weight: 300;
-    font-size: 15px;
-    line-height: 21px;
-    width: 350px;
-    height: 42px;
+    font-size: 14px;
+    /* line-height: 21px; */
+    width: 100%;
+    /* height: 42px; */
+    text-align:center;
+    margin-bottom:50px;
+    margin-top:10px;
 }
+.testimonial{
+    width: 100%;
+    /* height: 250px; */
+    border: 1px solid #5C6E4A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px ;
+    margin-top: 20px;
+    /* margin-right : 80px; */
+  border-radius: 5px;
+     
+}
+.testimonial-text{
+    font-weight: 400;
+    font-size: 12px;
+    text-align:center;
+    width:70%;
 
+}
+.author-name{
+
+    font-weight: 400;
+    font-size: 14px;
+    color: #5C6E4A;
+}
+.author-title {
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #282824;
+
+}
+.author-image{
+    width: 45px;
+    height: 45px;
+
+}
+.custom-testimonials--{{ section.id }} .splide .splide__slide:nth-child(3) {
+    visibility:visible;
+}
+.splide__arrow--next {
+    right: 0.1em;
+}
 
 }
 
@@ -145,12 +212,12 @@
         <h2 class="testimonial-title">{{ section.settings.heading }}</h2>
         <div class="description">{{ section.settings.description }}</div>
     </div>
-    <splider-component class="splide splide-author" data-options='{{ options }}'>
+    <splider-component class="custom-testimonials splide splide-author" data-options='{{ options }}'>
         <div class="splide__track">
-            <ul class="splide__list">
+            <ul class=" custom-testimonials--splide__list splide__list">
                 {% for block in section.blocks %}
                     <li class="splide__slide">
-                        <div class="testimonial">
+                        <div class="testimonial"  style="background:{{ block.settings.active_card_bg_color }}">
                             {% if block.settings.testimonial_text %}
                                 <div class="testimonial-text">{{ block.settings.testimonial_text }}</div>
                             {% endif %}
@@ -179,34 +246,48 @@
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Main Image Slider
         var splideMain = new Splide('.splide-main', {
             type : "fade",
-            {% comment %} fade: true, {% endcomment %}
             rewind: "true",
+            perPage:1,
+            pagination:false,
             
         });
         
-        // Author Information Slider
         var splideAuthor = new Splide('.splide-author', {
             type: 'slide',
             rewind: "true",
-            perPage:1,
+            {% comment %} perPage:1, {% endcomment %}
+            perPage:1.5,
+            perMove:1,
+            autoPlay:true,
+            breakpoints :{
+            768 : {
+            perPage:1
+            },
+            480 : {
+            perPage :1,
+            }
+        }
         });
 
-        // Mount both sliders
         splideMain.mount();
         splideAuthor.mount();
         splideMain.sync(splideAuthor);
         splideAuthor.sync(splideMain);
     });
+
+    var nextArrow = document.querySelector('.splide__arrow--next');
+
+    nextArrow.addEventListener('click', function() {
+        var currentSlideIndex = splideAuthor.index;
+
+        // If the current slide index is 1 (second slide), change its background color to #5C6E4A
+        if (currentSlideIndex === 1) {
+            document.querySelector('.splide__slide:nth-child(2) .testimonial').style.background = '#5C6E4A';
+        }
+    });
 </script>
-{% comment %} <script>
-    document.addEventListener( 'DOMContentLoaded', function() {
-      var splide = new Splide( '.splide' );
-      splide.mount();
-    } );
-  </script>  {% endcomment %}
 
 {% schema %}
 {
@@ -233,6 +314,12 @@
             "label": "Section Background",
             "default": "#ffffff"
           },
+          {
+            "type": "color",
+            "id": "active_slide_color",
+            "label": "Active Slide Color",
+            "default" : "#F6FFc2"
+        },
         {
             "type": "header",
             "content": "Section padding"
