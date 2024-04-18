@@ -866,29 +866,23 @@
     },
     "new_arrival_custom_KXaDgp": {
       "type": "new-arrival-custom",
-      "blocks": {
-        "product_collections_7jQdAw": {
-          "type": "product_collections",
-          "settings": {
-            "image_select": "shopify:\/\/shop_images\/newarrival.webp",
-            "imageHeading": "Women's Apparel",
-            "imageDescription": "<p>exclusive Best & New Arrivals collection<\/p>",
-            "button_label": "Explore",
-            "button_link": "",
-            "collection_name": "Collections Name",
-            "collection": "new-arrival"
-          }
-        }
-      },
-      "block_order": [
-        "product_collections_7jQdAw"
-      ],
       "settings": {
         "heading": "NEW ARRIVALS",
         "button_label": "See All Product",
         "button_link": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "image_select": "shopify:\/\/shop_images\/newarrival.webp",
+        "imageHeading": "Women's Apparel",
+        "imageDescription": "<p>exclusive Best & New Arrivals collection<\/p>",
+        "collection_name": "Collections Name",
+        "collection": "new-arrival",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "custom_featured_collection_NzhEtR": {
+      "type": "custom-featured-collection",
+      "settings": {
+        "name": "jklmnopq"
       }
     }
   },
@@ -914,6 +908,7 @@
     "history_of_durex_A8qeVU",
     "marquee_collections_XrirVz",
     "custom_liquid_GgtpJT",
-    "new_arrival_custom_KXaDgp"
+    "new_arrival_custom_KXaDgp",
+    "custom_featured_collection_NzhEtR"
   ]
 }

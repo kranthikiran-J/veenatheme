@@ -1,20 +1,161 @@
 {{ "new-arrival-custom.css" | asset_url | stylesheet_tag }}
+<script defer src={{"splide.min.js" | asset_url}}></script>
+<link rel="stylesheet" href="{{ "splide.min.css" | asset_url }}"> 
+
+<script src="{{ 'new-arrival-custom.js' | asset_url }}" defer></script>
+
+<script>
+  function showSecondImage(element) {
+      element.querySelector('.product-img').style.display = 'none';
+      element.querySelector('.second-image').style.display = 'block';
+  }
+
+  function showFirstImage(element) {
+      element.querySelector('.product-img').style.display = 'block';
+      element.querySelector('.second-image').style.display = 'none';
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#new-arrival-splide', {
+        type: 'slide',
+        perPage: 4,
+        rewind: true,
+        gap: '20px',
+        drag: true,
+        breakpoints: {
+            1024: {
+                perPage: 3,
+                drag: true
+            },
+            768: {
+                perPage: 2,
+                drag: true
+            }
+        },
+        arrows: true,
+        pagination: false,
+    }).mount();
+});
+</script>
+
+<style>
+  /* Style for static image */
+  .static-image {
+    width: 100%; /* Ensures the image width matches the product-container-item */
+    height: 100%; /* Ensures the image height matches the product-container-item */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+/* Style for image overlay */
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image-heading {
+    font-size: 24px;
+    color:#fff;
+    margin-bottom: 10px;
+}
+
+.image-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.explore-button {
+  background-color: #FFFFFF;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.explore-button:hover {
+  background-color: #a00; /* Adjust hover background color as needed */
+}
+  </style>
 <div class="new-arrival-custom-title-bar">
     <h3 class="new-arrival-custom-title">{{ section.settings.heading }}</h3>
     <a class="new-arrival-custom-button"> {{ section.settings.button_label }} </a>
 </div>
-{% for block in section.blocks %}
-  {% for product in block.settings.collection.products %}
-      <div class="product">
-          <h3>{{ product.title }}</h3>
-          <img src="{{ product.featured_image | image_url }}" width=200 height=200 alt="{{ product.title }}">
-          <p>{{ product.price | money }}</p>
-          <!-- Add other product details here -->
-          <a href="{{ product.url }}">View Product</a>
-      </div>
-  {% endfor %}
-{% endfor %}
 
+
+
+<div class="featured-custom-collection-container">
+  <div class="splide product-container" id="new-arrival-splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide product-container-item">
+          <div class="image-container">
+            <img src="{{ section.settings.image_select | image_url }}" width="" height="" alt="Static Image" class="product-img static-image">
+            <div class="image-overlay">
+                <h4 class="image-heading">{{ section.settings.imageHeading }}</h4>
+                <p class="image-description">{{ section.settings.imageDescription }}</p>
+                <a href="{{ section.settings.explore_button_link }}" class="explore-button">{{ section.settings.explore_button_label }}</a>
+            </div>          </div>
+      </li>
+      {% assign collection = collections[section.settings.collection] %}
+      {% if collection %}
+          {% for product in collection.products  %}
+              {% comment %} <div class="product-container-item"> {% endcomment %}
+              <li class="splide__slide product-container-item">
+                  {% if product.tags contains 'New' %}
+                      <div class="tag new-tag">New</div> <!-- New tag -->
+                  {% endif %}
+                  {% if product.compare_at_price > product.price %}
+                      {% assign regular_price = product.price %}
+                      {% assign compared_price = product.compare_at_price %}
+                      {% assign discount = compared_price | minus: regular_price %}
+                      {% assign discount_percent = discount | times: 100 | divided_by: compared_price %}
+                      <div class="tag discount-tag">{{ discount_percent | round }}% off</div> <!-- Discount tag -->
+                  {% endif %}
+                  <div class="image-container" onmouseover="showSecondImage(this)" onmouseout="showFirstImage(this)">
+                      <img class="product-img fetch-img" src="{{ product.images[0].src | image_url }}" alt="{{ product.title }}" width="300" height="300"/>
+                      <img class="product-img second-image" src="{{ product.images[1].src | image_url }}" alt="{{ product.title }}" width="300" height="300"/>
+                  </div>
+                  <a href="{{ product.url }}" class="quick-look-tag">Quick Look</a> <!-- Quick Look tag -->
+                  <div class="product-container-details">
+                      <div class="colors-container">
+                        {% for eachcolor in product.options_by_name['Color'].values %}
+                          {% assign val = forloop.index %}
+                          <div class="outer-radio" style="display:block;">
+                              <div class="radio-1" style="background-color:{{eachcolor}};display:block;" data-images="{{ product.images[val].src |image_url }}" data-imageindex="{{ forloop.parentloop.index }}"></div>
+                          </div>
+                      {% endfor %}
+                      </div>
+                      <p class="vendor-name">{{ product.vendor }}</p>
+                      <h3 class="product-name">{{ product.title }}</h3>
+                      <p class="price">
+                          <span class="product-price">{{ product.price | money }}</span>
+                          {% if product.compare_at_price > product.price %}
+                              <span class="compared-price">{{ product.compare_at_price | money }}</span>
+                          {% endif %}
+                      </p>
+                      <p class="stock">{{ product.variants.first.inventory_quantity }} in stock</p>
+                  </div>
+              {% comment %} </div> {% endcomment %}
+                </li>
+          {% endfor %}
+      {% else %}
+          <p class="no-products-message">No products found in the selected collection.</p>
+      {% endif %}
+    </ul>
+  </div>
+  </div>
+</div>
 
 
 {% schema %}
@@ -42,79 +183,72 @@
                     "id": "button_link",
                     "label": "Button url"
             },
-        {
-          "type": "header",
-          "content": "Section padding"
-      },
+        
       {
-          "type": "range",
-          "id": "padding_top",
-          "min": 0,
-          "max": 100,
-          "step": 10,
-          "unit": "px",
-          "label": "Padding Top",
-          "default": 0
-      },
-      {
-          "type": "range",
-          "id": "padding_bottom",
-          "min": 0,
-          "max": 100,
-          "step": 10,
-          "unit": "px",
-          "label": "Padding Bottom",
-          "default": 0
-      }
-    ],
-    "blocks": [
-      {
-        "name": "Slider",
-        "type": "product_collections",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image_select",
-            "label": "Select Image",
-            "info": "Select a Image"
-        },
-        {
-            "type": "text",
-            "id": "imageHeading",
-            "label": "Image Heading",
-            "default": "Women's Apparel"
-        },
-        {
-            "type": "richtext",
-            "id": "imageDescription",
-            "label": "Enter Description",
-            "default": "<p>exclusive Best & New Arrivals collection</p>"
-        },
-        {
-            "type": "text",
-            "id": "button_label",
-            "label": "Button label",
-            "default": "Explore"
-            
-        },
-        {
-                "type": "url",
-                "id": "button_link",
-                "label": "Button url"
-        },
-          {
-            "type": "text",
-            "id": "collection_name",
-            "label": "Collection Name",
-            "default": "Collections Name"
-          },    
-          {
-              "type": "collection",
-              "id": "collection",
-              "label": "Collection"
-          }
-        ]
-    }
+        "type": "image_picker",
+        "id": "image_select",
+        "label": "Select Image",
+        "info": "Select a Image"
+    },
+    {
+        "type": "text",
+        "id": "imageHeading",
+        "label": "Image Heading",
+        "default": "Women's Apparel"
+    },
+    {
+        "type": "richtext",
+        "id": "imageDescription",
+        "label": "Enter Description",
+        "default": "<p>exclusive Best & New Arrivals collection</p>"
+    },
+    {
+        "type": "text",
+        "id": "explore_button_label",
+        "label": "Button label",
+        "default": "Explore"
+        
+    },
+    {
+            "type": "url",
+            "id": "explore_button_link",
+            "label": "Button url"
+    },
+    {
+      "type": "text",
+      "id": "collection_name",
+      "label": "Collection Name",
+      "default": "Collections Name"
+    },    
+    {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+  },
+  {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+  },
+  {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+  }
     ],
     "presets": [
         {

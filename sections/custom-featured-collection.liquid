@@ -1,0 +1,24 @@
+{% assign name = section.settings.name %}
+<h2>
+    {% render "custom-product-card" , name:name %}
+</h2>
+
+
+{% schema %}
+
+{
+    "name": "custom featured c",
+    "settings": [
+        {
+            "type": "text",
+            "id": "name",
+            "label": "name"
+        }
+    ],
+    "presets": [
+        {
+            "name": "custom featured c"
+        }
+    ]
+}
+{% endschema %}
