@@ -18,7 +18,7 @@
         align-items:center;
 
 }
-.main-image-section {
+.custom-testimonials--main-image-section {
         width:50%;
         margin-left:auto;
 }
@@ -29,6 +29,7 @@
 .custom-testimonials--{{ section.id }} .splide .splide__slide:nth-child(3) {
     visibility:hidden;
 }
+
 
 
 @media screen and (max-width:749px){
@@ -42,7 +43,7 @@
         width:95%;
     
     }
-    .main-image-section {
+    .custom-testimonials--main-image-section {
         width:70%;
         display:flex;
         flex-direction:row;
@@ -50,7 +51,7 @@
         margin: auto;
         
     }
-.main-image{
+.custom-testimonials--main-image{
     width: 300px;
     /* height: auto; */
     height: 300px;
@@ -70,9 +71,9 @@
  .custom-testimonials {
     width:300px;
 }
-.splide__track{
+/* .splide__track{
     width:350px;
-} 
+}  */
 .custom-testimonials--{{ section.id }} .splide__slide{
  /* margin:auto; */
  /* width:450px; */
@@ -156,43 +157,18 @@
   "autoplay" : {{ section.settings.auto_play }}
 }
 {% endcapture %}
-{% comment %} <div class='custom-testimonials--{{ section.id }}' >
-<splider-component class="splide" data-options='{{ options }}'>
-    <div class="splide__track">
-        <ul class="splide__list">
-            {% for block in section.blocks %}
-                <li class="splide__slide">
-                    <div class="testimonial">
-                        {% if block.settings.testimonial_text %}
-                            <div class="testimonial-text">{{ block.settings.testimonial_text }}</div>
-                        {% endif %}
-                        {% if block.settings.author_image %}
-                            <img src="{{ block.settings.author_image | image_url }}" width=50 height=50 alt="Author Image">
-                        {% endif %}
-                        {% if block.settings.author_name %}
-                            <div class="author-name">{{ block.settings.author_name }}</div>
-                        {% endif %}
-                        {% if block.settings.author_title %}
-                            <div class="author-title">{{ block.settings.author_title }}</div>
-                        {% endif %}
-                    </div>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-</splider-component>
-</div> {% endcomment %}
+
 
 <div class='custom-testimonials--{{ section.id }}' >
 
-    <div class="main-image-section">
+    <div class="custom-testimonials--main-image-section">
     <splider-component class="splide splide-main" data-options='{{ options }}'>
         <div class="splide__track">
             <ul class="splide__list">
                 {% for block in section.blocks %}
                     <li class="splide__slide">
                         {% if block.settings.main_image %}
-                            <img src="{{ block.settings.main_image | image_url }}" class="main-image" width=200 height=200 alt="Main Image">
+                            <img src="{{ block.settings.main_image | image_url }}" class="custom-testimonials--main-image" width=200 height=200 alt="Main Image">
                         {% endif %}
                     </li>
                 {% endfor %}
@@ -204,8 +180,6 @@
 
 
     <div class="testimonial-section">
-
-{% comment %} <div class='custom-testimonials--{{ section.id }}' > {% endcomment %}
     <div class="section-content">
         <h2 class="testimonial-title">{{ section.settings.heading }}</h2>
         <div class="description">{{ section.settings.description }}</div>
