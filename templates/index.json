@@ -1,5 +1,50 @@
 {
   "sections": {
+    "hero_slider_wcEHAR": {
+      "type": "hero-slider",
+      "blocks": {
+        "slide_xiwajD": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/1.webp",
+            "heading": "Women's Apparel",
+            "description": "Elevate your wardrobe with our limited-time fashion offer!",
+            "button_label": "Explore More",
+            "text_alignment": "center",
+            "content_position": "center"
+          }
+        },
+        "slide_mENkVq": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/4.webp",
+            "heading": "Trendy Classics",
+            "description": "Discover Signature Look: Fashion Forward and Fabulous!",
+            "button_label": "Shop Now",
+            "text_alignment": "center",
+            "content_position": "center"
+          }
+        },
+        "slide_MGRJ8y": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/3.webp",
+            "heading": "Modern Elegance",
+            "description": "Step into the World of Style with the Latest Fashion Trends Unveiled!",
+            "button_label": "Explore Now",
+            "text_alignment": "center",
+            "content_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_xiwajD",
+        "slide_mENkVq",
+        "slide_MGRJ8y"
+      ],
+      "settings": {
+      }
+    },
     "slideshow_WKTRCK": {
       "type": "slideshow",
       "blocks": {
@@ -63,6 +108,7 @@
         "slide_dbw7QU",
         "slide_de3pDU"
       ],
+      "disabled": true,
       "settings": {
         "layout": "grid",
         "slide_height": "medium",
@@ -873,6 +919,8 @@
         "image_select": "shopify:\/\/shop_images\/newarrival.webp",
         "imageHeading": "Women's Apparel",
         "imageDescription": "<p>exclusive Best & New Arrivals collection<\/p>",
+        "explore_button_label": "Explore",
+        "explore_button_link": "",
         "collection_name": "Collections Name",
         "collection": "new-arrival",
         "padding_top": 20,
@@ -887,6 +935,7 @@
     }
   },
   "order": [
+    "hero_slider_wcEHAR",
     "slideshow_WKTRCK",
     "rich_text_zm6Ahm",
     "multicolumn_Fkw7dF",
