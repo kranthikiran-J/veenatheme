@@ -38,10 +38,21 @@
 </script>
 
 <style>
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+    width: calc(25% - 20px);
+}
+
+  .static-image-container {
+    width: auto; /* Adjust width for static image */
+    margin-right: 20px; /* Adjust spacing between static image and product container */
+    flex-shrink:0;
+}
   /* Style for static image */
   .static-image {
     width: 100%; /* Ensures the image width matches the product-container-item */
-    height: 100%; /* Ensures the image height matches the product-container-item */
+    height: auto; /* Ensures the image height matches the product-container-item */
     object-fit: cover; /* Ensures the image covers the container without distortion */
 }
 
@@ -95,6 +106,15 @@
 
 
 <div class="featured-custom-collection-container">
+  {% comment %} <div class="row">
+  <div class="static-image-container">
+    <img src="{{ section.settings.image_select | image_url }}" width="" height="" alt="Static Image" class="product-img static-image">
+    <div class="image-overlay">
+        <h4 class="image-heading">{{ section.settings.imageHeading }}</h4>
+        <p class="image-description">{{ section.settings.imageDescription }}</p>
+        <a href="{{ section.settings.explore_button_link }}" class="explore-button">{{ section.settings.explore_button_label }}</a>
+    </div>          
+  </div> {% endcomment %}
   <div class="splide product-container" id="new-arrival-splide">
     <div class="splide__track">
       <ul class="splide__list">
@@ -105,7 +125,8 @@
                 <h4 class="image-heading">{{ section.settings.imageHeading }}</h4>
                 <p class="image-description">{{ section.settings.imageDescription }}</p>
                 <a href="{{ section.settings.explore_button_link }}" class="explore-button">{{ section.settings.explore_button_label }}</a>
-            </div>          </div>
+            </div>          
+          </div> 
       </li>
       {% assign collection = collections[section.settings.collection] %}
       {% if collection %}
@@ -155,6 +176,7 @@
     </ul>
   </div>
   </div>
+{% comment %} </div> {% endcomment %}
 </div>
 
 
