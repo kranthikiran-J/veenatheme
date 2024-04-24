@@ -17,17 +17,17 @@
   document.addEventListener('DOMContentLoaded', function () {
     new Splide('#new-arrival-splide', {
         type: 'slide',
-        perPage: 4,
+        perPage: 3,
         rewind: true,
         gap: '20px',
         drag: true,
         breakpoints: {
             1024: {
-                perPage: 3,
+                perPage: 2,
                 drag: true
             },
             768: {
-                perPage: 2,
+                perPage: 1,
                 drag: true
             }
         },
@@ -41,18 +41,18 @@
   .row {
     display: flex;
     flex-wrap: nowrap;
-    width: calc(25% - 20px);
+    {% comment %} width: calc(25% - 20px); {% endcomment %}
 }
 
   .static-image-container {
     width: auto; /* Adjust width for static image */
     margin-right: 20px; /* Adjust spacing between static image and product container */
-    flex-shrink:0;
+    {% comment %} flex-shrink:0; {% endcomment %}
 }
   /* Style for static image */
   .static-image {
     width: 100%; /* Ensures the image width matches the product-container-item */
-    height: auto; /* Ensures the image height matches the product-container-item */
+    height: 100%; /* Ensures the image height matches the product-container-item */
     object-fit: cover; /* Ensures the image covers the container without distortion */
 }
 
@@ -97,37 +97,35 @@
 .explore-button:hover {
   background-color: #a00; /* Adjust hover background color as needed */
 }
+
+.image-container1{
+  height:100%;
+}
+
+
   </style>
-<div class="new-arrival-custom-title-bar">
+<div class="page-width">
+<div class="new-arrival-custom-title-bar ">
     <h3 class="new-arrival-custom-title">{{ section.settings.heading }}</h3>
     <a class="new-arrival-custom-button"> {{ section.settings.button_label }} </a>
 </div>
 
+<div class="page-width">
 
-
-<div class="featured-custom-collection-container">
-  {% comment %} <div class="row">
-  <div class="static-image-container">
-    <img src="{{ section.settings.image_select | image_url }}" width="" height="" alt="Static Image" class="product-img static-image">
-    <div class="image-overlay">
-        <h4 class="image-heading">{{ section.settings.imageHeading }}</h4>
-        <p class="image-description">{{ section.settings.imageDescription }}</p>
-        <a href="{{ section.settings.explore_button_link }}" class="explore-button">{{ section.settings.explore_button_label }}</a>
-    </div>          
-  </div> {% endcomment %}
+<div class="new-arrival-custom-collection-container ">
+  <li class="splide__slide  product-container-item">
+    <div class="image-container1">
+      <img src="{{ section.settings.image_select | image_url }}" width="" height="" alt="Static Image" class="product-img static-image">
+      <div class="image-overlay">
+          <h4 class="image-heading">{{ section.settings.imageHeading }}</h4>
+          <p class="image-description">{{ section.settings.imageDescription }}</p>
+          <a href="{{ section.settings.explore_button_link }}" class="explore-button">{{ section.settings.explore_button_label }}</a>
+      </div>          
+    </div> 
+</li>
   <div class="splide product-container" id="new-arrival-splide">
     <div class="splide__track">
       <ul class="splide__list">
-        <li class="splide__slide product-container-item">
-          <div class="image-container">
-            <img src="{{ section.settings.image_select | image_url }}" width="" height="" alt="Static Image" class="product-img static-image">
-            <div class="image-overlay">
-                <h4 class="image-heading">{{ section.settings.imageHeading }}</h4>
-                <p class="image-description">{{ section.settings.imageDescription }}</p>
-                <a href="{{ section.settings.explore_button_link }}" class="explore-button">{{ section.settings.explore_button_label }}</a>
-            </div>          
-          </div> 
-      </li>
       {% assign collection = collections[section.settings.collection] %}
       {% if collection %}
           {% for product in collection.products  %}
@@ -178,8 +176,8 @@
   </div>
 {% comment %} </div> {% endcomment %}
 </div>
-
-
+</div>
+</div>
 {% schema %}
 {
     "name": "Custom New Arrival",

@@ -208,24 +208,57 @@
         "slide_ike8kh",
         "slide_qgid6W"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Testimonials",
         "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
         "section_background": "rgba(0,0,0,0)",
-        "active_slide_color": "#F6FFc2",
+        "active_slide_color": "#f6ffc2",
         "padding_top": 40,
         "padding_bottom": 40
       }
     },
     "custom_email_subscription_LmeRTx": {
       "type": "custom-email-subscription",
+      "disabled": true,
       "settings": {
         "heading": "Subscribe To Our Newsletter",
-        "section_background": "#EDFF84",
+        "section_background": "#edff84",
         "button_label": "Subscribe",
         "button_link": "",
         "padding_top": 40,
         "padding_bottom": 90
+      }
+    },
+    "shop_the_look_QX6F9N": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_GhwEjj": {
+          "type": "product",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/image_3.png",
+            "primary_left_position": 25,
+            "primary_top_position": 6,
+            "primary_product": "snow-goggles",
+            "secondary_left_position": 20,
+            "secondary_top_position": 15,
+            "secondary_product": "mens-ski-jacket",
+            "third_left_position": 40,
+            "third_top_position": 26,
+            "third_product": "ski-boots",
+            "fourth_left_position": 48,
+            "fourth_top_position": 23,
+            "fourth_product": "snowboard"
+          }
+        }
+      },
+      "block_order": [
+        "product_GhwEjj"
+      ],
+      "settings": {
+        "section_title": "Shop the Look",
+        "padding_top": 30,
+        "padding_bottom": 30
       }
     }
   },
@@ -234,6 +267,7 @@
     "history_of_durex_Ez9Bq8",
     "history_of_d_FmtbdW",
     "custom_testimonials_AgGHx9",
-    "custom_email_subscription_LmeRTx"
+    "custom_email_subscription_LmeRTx",
+    "shop_the_look_QX6F9N"
   ]
 }
