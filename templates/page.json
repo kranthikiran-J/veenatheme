@@ -166,6 +166,18 @@
     "custom_testimonials_AgGHx9": {
       "type": "custom-testimonials",
       "blocks": {
+        "slide_UyCBWd": {
+          "type": "slide",
+          "settings": {
+            "active_card_bg_color": "#ffffff",
+            "card_bg_color": "#f2f2f2",
+            "testimonial_text": "<p>my testimonials<\/p>",
+            "author_image": "shopify:\/\/shop_images\/3_8d5c7278-5751-419a-a3d5-f525bc6291ed.webp",
+            "author_name": "John Doe",
+            "author_title": "CEO",
+            "main_image": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg"
+          }
+        },
         "slide_GULVL9": {
           "type": "slide",
           "settings": {
@@ -204,11 +216,11 @@
         }
       },
       "block_order": [
+        "slide_UyCBWd",
         "slide_GULVL9",
         "slide_ike8kh",
         "slide_qgid6W"
       ],
-      "disabled": true,
       "settings": {
         "heading": "Testimonials",
         "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
@@ -220,7 +232,6 @@
     },
     "custom_email_subscription_LmeRTx": {
       "type": "custom-email-subscription",
-      "disabled": true,
       "settings": {
         "heading": "Subscribe To Our Newsletter",
         "section_background": "#edff84",
@@ -255,6 +266,7 @@
       "block_order": [
         "product_GhwEjj"
       ],
+      "disabled": true,
       "settings": {
         "section_title": "Shop the Look",
         "padding_top": 30,
