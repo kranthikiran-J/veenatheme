@@ -772,6 +772,17 @@
       ],
       "settings": {
         "section_title": "Shop the Look",
+        "product_list": [
+          "classic-baseball-hat",
+          "corben-shoulder-bag",
+          "cotton-style-bucket-hat",
+          "full-sleeve-high-neck-t-shirt-1"
+        ],
+        "auto_play": false,
+        "show_pagination": true,
+        "show_arrows": true,
+        "auto_play_duration": 2000,
+        "Slide_animation": "slide",
         "padding_top": 30,
         "padding_bottom": 30
       }

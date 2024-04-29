@@ -1,5 +1,7 @@
 {{ "shop-the-look.css" | asset_url | stylesheet_tag }}
 
+<script src = {{ "custom-slideshow.js"| asset_url }} defer> </script>
+
 {% style %}
     .padding-{{ section.id }} {
       padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
@@ -40,6 +42,19 @@
         }
     }
 {% endstyle %}
+
+
+{%- capture options -%}
+  
+  {
+    "pagination": {{ section.settings.show_pagination }} ,
+    "type": "{{ section.settings.Slide_animation }}" ,
+    "arrows": {{ section.settings.show_arrows }},
+    "autoplay" : {{ section.settings.auto_play }},
+    "perpage": 1
+  }
+  
+  {% endcapture %}
 
 <div class="shop-the-look padding-{{ section.id }}">
     <div class="page-width">
@@ -216,8 +231,38 @@
         {% endfor %}
       </div>
     </div>
-  </div>
-
+    <div class="hotspot-slide">
+      <splider-component class="splide" data-options='{{ options }}'>
+        <div class="splide__track">
+            <ul class="splide__list">
+                    {% for product in section.settings.product_list %}
+                      <li class="splide__slide custom-border-radius">
+                        <a href="{{ product.url }}" class="product-link">
+                          <div class="product-slide">
+                            <div class="product-images">
+                              <img src="{{ product.featured_image.src | img_url: 'medium' }}" height="" width="" alt="{{ product.title }}" class="first-image">
+                            </div>
+                          </div>
+                          <div class="product-slider-content">
+                              <span class="product-type" >{{ product.vendor }}</span>
+                              <h3 class="product-title" >{{ product.title }}</h3>
+                              <p class="product-price" >{{ product.price | money }}</p>
+                          </div>
+                        </a>
+                      </li>
+                   {% endfor %}
+            </ul>
+        </div>
+    </splider-component>
+    </div>
+</div>
+ 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Splider slider
+        var splide = new Splide('#splide-{{ section.id }}', {{ options }}).mount();
+    });
+</script>
   {% schema %}
   {
     "name": "shop the look",
@@ -234,6 +279,71 @@
         "label": "Section title",
         "default": "Shop the Look"
         },
+        {
+          "type": "header",
+          "content": "Product list"
+        },
+        {
+          "type": "product_list",
+          "id": "product_list",
+          "label": "List of products"
+          },
+        {
+          "type": "header",
+          "content": "splider options"
+      },
+      {
+          "type": "checkbox",
+          "id":"auto_play",
+          "label":"Enable auto play",
+          "default":false
+      },
+      {
+          "type": "checkbox",
+          "id":"show_pagination",
+          "label":"Show dots",
+          "default":true
+      },
+      {
+          "type": "checkbox",
+          "id":"show_arrows",
+          "label":"Show arrows",
+          "default":true
+      },
+      {
+          "type": "range",
+          "id": "auto_play_duration",
+          "min": 1000,
+          "max": 5000,
+          "step": 1000,
+          "unit": "sec",
+          "label": "Autoplay duration",
+          "default": 2000
+      },
+      {
+          "type": "header",
+          "content": "Animation options"
+      },
+      {
+          "type": "select",
+          "id": "Slide_animation",
+          "label": "Slide animation",
+          "options": [
+              {
+              "value": "fade",
+              "label": "Fade"
+              },
+              {
+                  "value": "slide",
+                  "label": "slide"
+              },
+              {
+                      "value": "loop",
+                      "label": "Loop"
+              }
+          ],
+          "default": "slide"
+      },
       {
         "type": "header",
         "content": "Section padding"
