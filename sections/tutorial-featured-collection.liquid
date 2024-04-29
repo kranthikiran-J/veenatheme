@@ -74,9 +74,10 @@
       });
   });
 </script>
+{% assign collection = section.settings.collection %}
 <div class="featured-custom-title-bar">
   <h3 class="featured-custom-title">{{ section.settings.heading }}</h3>
-  <a class="featured-custom-button"> View all</a>
+  <a href="{{ collection.url }}" class="featured-custom-button"> View all</a>
 </div>
 
 
