@@ -12,7 +12,11 @@
     {% render 'responsive-picture', desktopImage: variant_featured_image, class: 'h-full' %}
   </div>
   <div class="custom-product-card--info center">
-    <div class="custom-product-card--variant-select"></div>
+    <div class="custom-product-card--variant-select">
+      {% for option in product.options_with_values %}
+        {{ option }}
+      {% endfor %}
+    </div>
     <div class="custom-product-card--vendor">
       {{ product.vendor }}
     </div>
