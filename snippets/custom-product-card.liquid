@@ -24,7 +24,7 @@
       <span class="custom-product-card--price-on-sale"> {{ card_product.compare_at_price | money_with_currency }}</span>
     </div>
      <div class="custom-product-card--inventory {% if card_product.inventory_quantity < 15 %} low-stock {% else %} high-stock {% endif %}">
-      {{ card_product.inventory_quantity }}
+      {{ card_product.inventory_quantity }} in stock
     </div>
   </div>
 </div>
