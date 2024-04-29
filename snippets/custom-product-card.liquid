@@ -13,7 +13,7 @@
     {% render 'responsive-picture', desktopImage: variant_featured_image, class: 'h-full' %}
     <!-- Badges  using meta field-->
 
-    {% for badge_text in product.metafields.custom.custom_badge %}
+    {% for badge_text in product.metafields.custom.custom_badge.value %}
    --   <span class=""> {{ badge_text }} </span>
     {% endfor %}
     
