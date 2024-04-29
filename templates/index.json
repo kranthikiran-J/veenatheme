@@ -780,7 +780,14 @@
       "type": "tutorial-featured-collection",
       "settings": {
         "heading": "Heading",
-        "collection": "featured-collections",
+        "product_list": [
+          "full-sleeve-high-neck-t-shirt-1",
+          "full-sleeve-high-neck-t-shirt",
+          "long-casual-hooded-coat",
+          "men-solid-casual-jacket",
+          "men-winter-jacket",
+          "mens-full-sleeve-t-shirt"
+        ],
         "show_view_all": true
       }
     }
