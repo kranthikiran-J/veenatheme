@@ -51,6 +51,7 @@
               name="{{ option.name }}"
               type="radio"
               value="{{ value }}"
+              data-variant-id={{ card_product_variant.id }}
             >
             <label for="custom_variant_radio--{{ forloop.index }}">{{ value }}</label>
           {% endfor %}
