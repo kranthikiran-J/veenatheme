@@ -12,11 +12,11 @@
     {% render 'responsive-picture', desktopImage: variant_featured_image, class: 'h-full' %}
     
     <!-- Badges  using tags -->
-    {% if tag contains product.tags- %}
     {% for tag in product.tags %}
-        
-    {% endfor %}
+    {% if tag contains product.tags- %}
+        {% assign badge_text = tag | split: "badge--" | last %}
     {% endif %}
+    {% endfor %}
     <!-- Badges  using meta field -->
 
     {% for badge_text in product.metafields.custom.custom_badge.value %}
