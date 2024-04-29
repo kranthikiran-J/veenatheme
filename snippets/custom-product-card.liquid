@@ -12,8 +12,11 @@
     {% render 'responsive-picture', desktopImage: variant_featured_image, class: 'h-full' %}
     
     <!-- Badges  using tags -->
-    
-    
+    {% for tag in product.tags %}
+
+      {% echo tag %}
+      
+    {% endfor %}
     <!-- Badges  using meta field -->
 
     {% for badge_text in product.metafields.custom.custom_badge.value %}
