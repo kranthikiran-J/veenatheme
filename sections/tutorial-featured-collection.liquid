@@ -6,7 +6,7 @@
 
 <div class="tutorial">
   <h3 class="featured-custom-title">{{ section.settings.heading }}</h3>
-  <ul>
+  <ul class="grid">
     {% for product in products %}
       <li>
         {% render 'custom-product-card', product: product %}
