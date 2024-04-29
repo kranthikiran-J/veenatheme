@@ -6,3 +6,9 @@
   text-decoration:line-through;
   color:red;
 }
+.custom-product-card--inventory.low-stock{
+  color:red;
+}
+.custom-product-card--inventory.high-stock{
+  color:green;
+}
