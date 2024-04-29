@@ -15,7 +15,7 @@
     <div class="custom-product-card--variant-select">
       {% for option in product.options_with_values %}
        {% if option.name == 'color' or option.name == 'Color' %}
-         
+         <input type="radio" value={{ option.value }} />
         {% endif %} 
       {% endfor %}
     </div>
