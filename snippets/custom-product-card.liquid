@@ -23,5 +23,8 @@
       <span class="custom-product-card--price"> {{ card_product.price | money_with_currency }}</span>
       <span class="custom-product-card--price-on-sale"> {{ card_product.compare_at_price | money_with_currency }}</span>
     </div>
+     <div class="custom-product-card--inventory">
+      {{ card_product.inventory_quantity }}
+    </div>
   </div>
 </div>
