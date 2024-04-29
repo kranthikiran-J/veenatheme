@@ -4,7 +4,7 @@
 {% else %}
   {% assign variant_featured_image = product.featured_image %}
 {% endif %}
-
+<script src="{{ 'custom-product-card.js' | asset_url }}" defer></script>
 {{ 'custom-product-card.css' | asset_url | stylesheet_tag }}
 
 <veena-product-card data-handle="{{ product.handle }}" class="custom-product-card">
