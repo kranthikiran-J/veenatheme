@@ -14,7 +14,9 @@
   <div class="custom-product-card--info center">
     <div class="custom-product-card--variant-select">
       {% for option in product.options_with_values %}
-        {{ option }}
+       {% if option.name == 'color' or option.name == 'Color' %}
+         
+        {% endif %} 
       {% endfor %}
     </div>
     <div class="custom-product-card--vendor">
