@@ -261,13 +261,7 @@
             "third_product": "ski-boots",
             "fourth_left_position": 48,
             "fourth_top_position": 23,
-            "fourth_product": "snowboard",
-            "product_list": [
-              "mens-ski-jacket",
-              "ski-boots",
-              "snow-goggles",
-              "snowboard"
-            ]
+            "fourth_product": "snowboard"
           }
         }
       },

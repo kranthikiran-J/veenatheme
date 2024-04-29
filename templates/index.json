@@ -786,6 +786,19 @@
         "padding_top": 30,
         "padding_bottom": 30
       }
+    },
+    "tutorial_featured_collection_HpCph8": {
+      "type": "tutorial-featured-collection",
+      "settings": {
+        "heading": "Heading",
+        "product_list": [
+          "full-sleeve-high-neck-t-shirt-1",
+          "full-sleeve-high-neck-t-shirt",
+          "long-casual-hooded-coat",
+          "men-winter-jacket"
+        ],
+        "show_view_all": true
+      }
     }
   },
   "order": [
@@ -809,6 +822,7 @@
     "marquee_collections_XrirVz",
     "usp_section_XLbzwe",
     "new_arrival_custom_KXaDgp",
-    "shop_the_look_8LeG4W"
+    "shop_the_look_8LeG4W",
+    "tutorial_featured_collection_HpCph8"
   ]
 }

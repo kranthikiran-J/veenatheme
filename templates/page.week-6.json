@@ -221,7 +221,6 @@
         "slide_ike8kh",
         "slide_qgid6W"
       ],
-      "disabled": true,
       "settings": {
         "heading": "Testimonials",
         "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
@@ -233,7 +232,6 @@
     },
     "custom_email_subscription_LmeRTx": {
       "type": "custom-email-subscription",
-      "disabled": true,
       "settings": {
         "heading": "Subscribe To Our Newsletter",
         "section_background": "#edff84",
@@ -261,19 +259,14 @@
             "third_product": "ski-boots",
             "fourth_left_position": 48,
             "fourth_top_position": 23,
-            "fourth_product": "snowboard",
-            "product_list": [
-              "mens-ski-jacket",
-              "ski-boots",
-              "snow-goggles",
-              "snowboard"
-            ]
+            "fourth_product": "snowboard"
           }
         }
       },
       "block_order": [
         "product_GhwEjj"
       ],
+      "disabled": true,
       "settings": {
         "section_title": "Shop the Look",
         "padding_top": 30,
