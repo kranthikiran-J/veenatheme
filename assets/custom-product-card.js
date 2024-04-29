@@ -18,7 +18,7 @@ class VeenaProductCard extends HTMLElement {
       .then((response) => response.text())
       .then((responseText) => {
         const html = new DOMParser().parseFromString(responseText, 'text/html');
-        const responseCard = html.querySelector('marmeto-product-card');
+        const responseCard = html.querySelector('veena-product-card');
        //Change the DOM Elements
         this.innerHTML = responseCard.innerHTML;
       });
