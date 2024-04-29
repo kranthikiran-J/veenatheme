@@ -11,12 +11,19 @@
   <div class="custom-product-card--image-wrapper">
     {% render 'responsive-picture', desktopImage: variant_featured_image, class: 'h-full' %}
     <!-- Badges  using meta field -->
-    
+
     {% for badge_text in product.metafields.custom.custom_badge.value %}
       <span class="badge"> {{ badge_text }} </span>
     {% endfor %}
     <!-- Badges  based on calculation -->
-    
+
+    {% if card_product_variant.price < card_product_variant.compare_at_price %}
+      <span
+        class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+      >
+        {{- 'products.product.on_sale' | t -}}
+      </span>
+    {% endif %}
   </div>
   <div class="custom-product-card--info center">
     <div class="custom-product-card--variant-select">
