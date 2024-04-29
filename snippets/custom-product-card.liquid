@@ -7,18 +7,21 @@
 
 {{ 'custom-product-card.css' | asset_url | stylesheet_tag }}
 
-<div class="custom-product-card">
-  <div class="custom-product-card-image-wrapper">
+<div class="custom-product-card-">
+  <div class="custom-product-card--image-wrapper">
     {% render 'responsive-picture', desktopImage: variant_featured_image, class:"h-full" %}
   </div>
-   <div class="custom-product-card-info">
-    <div class="custom-product-card-variant-select">
+   <div class="custom-product-card--info">
+    <div class="custom-product-card--variant-select">
       
     </div>
-    <div class="custom-product-card-title">
+    <div class="custom-product-card--title">
       {{ card_product.title }}
     </div>
-    <div class="custom-product-card-vendor">
+     <div class="custom-product-card--price-container">
+      {{ card_product.title }}
+    </div>
+    <div class="custom-product-card--vendor">
       {{ card_product.vendor }}
     </div>
   </div>
