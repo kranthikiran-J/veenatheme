@@ -16,7 +16,7 @@
       <span class="badge"> {{ badge_text }} </span>
     {% endfor %}
     <!-- Badges  based on calculation -->
-    {%- if card_product.available == false -%}
+    {%- if card_product_variant.available == false -%}
       <span
         class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
       >
