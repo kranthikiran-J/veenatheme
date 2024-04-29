@@ -10,6 +10,10 @@
 <div class="custom-product-card-">
   <div class="custom-product-card--image-wrapper isolate">
     {% render 'responsive-picture', desktopImage: variant_featured_image, class: 'h-full' %}
+    
+    <!-- Badges  using tags -->
+    
+    
     <!-- Badges  using meta field -->
 
     {% for badge_text in product.metafields.custom.custom_badge.value %}
