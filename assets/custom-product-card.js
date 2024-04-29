@@ -13,13 +13,13 @@ class VeenaProductCard extends HTMLElement {
     this.selectedVariantId = this.querySelector('[name="id"]').value;
     let variantUrl = `/products/${this.dataset.handle}?view=custom-product-card&variant=${this.selectedVariantId}`;
      
-    //Change the DOM Elements
+    //Fetching for new html
     fetch(variantUrl)
       .then((response) => response.text())
       .then((responseText) => {
         const html = new DOMParser().parseFromString(responseText, 'text/html');
         const responseCard = html.querySelector('marmeto-product-card');
-
+       //Change the DOM Elements
         this.innerHTML = responseCard.innerHTML;
       });
   }
