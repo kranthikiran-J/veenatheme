@@ -8,7 +8,7 @@
   <h3 class="featured-custom-title">{{ section.settings.heading }}</h3>
   <ul class="grid gri">
     {% for product in products %}
-      <li class="grid__item">
+      <li class="grid__item grid--4-col-desktop">
         {% render 'custom-product-card', product: product %}
       </li>
     {% endfor %}
