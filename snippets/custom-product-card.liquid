@@ -1,3 +1,17 @@
-{% assign card_product = product %}
+{% assign card_product = product.selected_or_first_available_variant %}
+
 
 {{ 'custom-product-card.css' | asset_url | stylesheet_tag }}
+
+<div class="custom-product-card">
+
+  
+<div class="custom-product-card-image-wrapper">
+
+  {% render 'responsive-picture' desktopImage:"" %}
+
+  
+</div>
+
+  
+</div>
