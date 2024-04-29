@@ -1,83 +1,19 @@
 {{ 'featured-custom-collection.css' | asset_url | stylesheet_tag }}
 <script defer src="{{"splide.min.js" | asset_url}}"></script>
 <link rel="stylesheet" href="{{ "splide.min.css" | asset_url }}">
-
 <script src="{{ 'featured-custom-collection.js' | asset_url }}" defer></script>
-<script>
-  function showSecondImage(element) {
-      element.querySelector('.product-img').style.display = 'none';
-      element.querySelector('.second-image').style.display = 'block';
-  }
+{% assign products = section.settings.product_list %}
 
-  function showFirstImage(element) {
-      element.querySelector('.product-img').style.display = 'block';
-      element.querySelector('.second-image').style.display = 'none';
-  }
-  document.addEventListener('DOMContentLoaded', function () {
-
-      // Initialize Splide sliders
-      var splide1 = new Splide('#splide-1', {
-          type: 'slide',
-          perPage: 4,
-          {% comment %} perMove:2, {% endcomment %}
-          rewind: true,
-          focus: 'center',
-          gap: '20px',
-          drag:true,
-          breakpoints: {
-              1024: {
-                  perPage: 3, // Display 3 products per page on medium screens (width >= 1024px)
-                  drag:true
-              },
-              768: {
-                  perPage: 2,
-                  drag:true
-
-              }
-          },
-          arrows: true,
-          pagination: false,
-
-      }).mount();
-
-      var splide2 = new Splide('#splide-2', {
-          type: 'slide',
-          perPage: 4,
-          {% comment %} perMove:1, {% endcomment %}
-          rewind: true,
-          focus: 'center',
-          gap: '20px',
-          drag:true,
-          breakpoints: {
-              1024: {
-                  perPage: 3, // Display 3 products per page on medium screens (width >= 1024px)
-                  drag:true
-              },
-              768: {
-                  perPage: 2,
-                  drag:true
-
-              }
-          },
-          arrows: true,
-          pagination: false,
-
-      }).mount();
-
-      // Synchronize the sliders
-      splide1.on('move', function (newIndex, oldIndex, destIndex) {
-          splide2.go(destIndex);
-      });
-
-      splide2.on('move', function (newIndex, oldIndex, destIndex) {
-          splide1.go(destIndex);
-      });
-  });
-</script>
 <div class="featured-custom-title-bar">
   <h3 class="featured-custom-title">{{ section.settings.heading }}</h3>
+  <ul>
+    {% for product in products %}
+      <li>
+        {% render 'custom-product-card', product: product %}
+      </li>
+    {% endfor %}
+  </ul>
 </div>
-
 
 {% schema %}
 {
