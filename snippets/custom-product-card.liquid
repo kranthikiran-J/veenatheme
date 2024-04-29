@@ -25,7 +25,7 @@
 
     {% elsif card_product_variant.price < card_product_variant.compare_at_price %}
       <span
-        class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+        class="badge badge--top-left color-{{ settings.sale_badge_color_scheme }}"
       >
         {% assign price_diff = card_product_variant.compare_at_price | minus: card_product_variant.price %}
        {{    }} %off
