@@ -6,9 +6,9 @@
 
 <div class="tutorial">
   <h3 class="featured-custom-title">{{ section.settings.heading }}</h3>
-  <ul class="grid">
+  <ul class="grid gri">
     {% for product in products %}
-      <li>
+      <li class="grid__item">
         {% render 'custom-product-card', product: product %}
       </li>
     {% endfor %}
