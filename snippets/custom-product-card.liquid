@@ -27,7 +27,7 @@
       <span
         class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
       >
-       {{  }} %off
+       {{ card_product_variant.compare_at_price - card_product_variant.price | divided_by: card_product_variant.compare_at_price | times: 100  }} %off
       </span>
       
     {% endif %}
