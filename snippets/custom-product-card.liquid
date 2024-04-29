@@ -9,21 +9,19 @@
 
 <div class="custom-product-card-">
   <div class="custom-product-card--image-wrapper">
-    {% render 'responsive-picture', desktopImage: variant_featured_image, class:"h-full" %}
+    {% render 'responsive-picture', desktopImage: variant_featured_image, class: 'h-full' %}
   </div>
-   <div class="custom-product-card--info">
-    <div class="custom-product-card--variant-select">
-      
+  <div class="custom-product-card--info">
+    <div class="custom-product-card--variant-select"></div>
+    <div class="custom-product-card--vendor">
+      {{ product.vendor }}
     </div>
     <div class="custom-product-card--title">
       {{ card_product.title }}
     </div>
-     <div class="custom-product-card--price-container">
-     <span class="custom-product-card--price"> {{ card_product.price | money_with_currency }}</span>
-     <span class="custom-product-card--price-on-sale"> {{ card_product.compare_at_price | money_with_currency }}</span>
-    </div>
-    <div class="custom-product-card--vendor">
-      {{ card_product.vendor }}
+    <div class="custom-product-card--price-container">
+      <span class="custom-product-card--price"> {{ card_product.price | money_with_currency }}</span>
+      <span class="custom-product-card--price-on-sale"> {{ card_product.compare_at_price | money_with_currency }}</span>
     </div>
   </div>
 </div>
