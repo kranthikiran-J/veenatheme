@@ -11,10 +11,12 @@
   <div class="custom-product-card--image-wrapper">
     {% render 'responsive-picture', desktopImage: variant_featured_image, class: 'h-full' %}
     <!-- Badges  using meta field -->
-
+    
     {% for badge_text in product.metafields.custom.custom_badge.value %}
       <span class="badge"> {{ badge_text }} </span>
     {% endfor %}
+    <!-- Badges  based on calculation -->
+    
   </div>
   <div class="custom-product-card--info center">
     <div class="custom-product-card--variant-select">
