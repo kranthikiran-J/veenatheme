@@ -1,4 +1,4 @@
-class VeenaProductCard extends HTMLelements {
+class VeenaProductCard extends HTMLElement {
   constructor() {
     super();
 
