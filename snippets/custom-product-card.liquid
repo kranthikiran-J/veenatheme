@@ -15,6 +15,7 @@
     {% for tag in product.tags %}
     {% if tag contains product.tags- %}
         {% assign badge_text = tag | split: "badge--" | last %}
+      <span class="badge"> {{ badge_text }} </span>
     {% endif %}
     {% endfor %}
     <!-- Badges  using meta field -->
