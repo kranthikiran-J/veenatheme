@@ -14,9 +14,11 @@
   <div class="custom-product-card--info center">
     <div class="custom-product-card--variant-select">
       {% for option in product.options_with_values %}
-       {% if option.name == 'color' or option.name == 'Color' %}
-         <input type="radio" value={{ option.value }} />
-        {% endif %} 
+        {% if option.name == 'color' or option.name == 'Color' %}
+          {% for value in option.values %}
+            <input type="radio" value="{{ value }}">
+          {% endfor %}
+        {% endif %}
       {% endfor %}
     </div>
     <div class="custom-product-card--vendor">
@@ -29,7 +31,7 @@
       <span class="custom-product-card--price"> {{ card_product.price | money_with_currency }}</span>
       <span class="custom-product-card--price-on-sale"> {{ card_product.compare_at_price | money_with_currency }}</span>
     </div>
-     <div class="custom-product-card--inventory {% if card_product.inventory_quantity < 15 %} low-stock {% else %} high-stock {% endif %}">
+    <div class="custom-product-card--inventory {% if card_product.inventory_quantity < 15 %} low-stock {% else %} high-stock {% endif %}">
       {{ card_product.inventory_quantity }} in stock
     </div>
   </div>
