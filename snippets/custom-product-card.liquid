@@ -2,7 +2,7 @@
 {% if card_product.featured_image != blank %}
 {% assign variant_featured_image = card_product.featured_image %}
 {% else %}
-{% assign variant_featured_image = card_product.image %}
+{% assign variant_featured_image = product.featured_image %}
 {% endif %}
   
 
@@ -13,7 +13,7 @@
   
 <div class="custom-product-card-image-wrapper">
 
-  {% render 'responsive-picture', desktopImage:card_product.featured_image %}
+  {% render 'responsive-picture', desktopImage:variant_featured_image %}
 
   
 </div>
