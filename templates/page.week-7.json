@@ -1,0 +1,286 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "history_of_durex_Ez9Bq8": {
+      "type": "history-of-durex",
+      "blocks": {
+        "custom_block_rYDbVP": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002347.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        },
+        "custom_block_txnzzk": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004846.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002348.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        },
+        "custom_block_NkajVw": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002349.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        },
+        "custom_block_RAGLwp": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Group_1000002364_3.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002350.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        },
+        "custom_block_bcHX3D": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845_2.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002352.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        },
+        "custom_block_w3rDGL": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004846_2.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002352.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        },
+        "custom_block_EewhUj": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845_3.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002353.png",
+            "image_line": "shopify:\/\/shop_images\/Line_42.png"
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_rYDbVP",
+        "custom_block_txnzzk",
+        "custom_block_NkajVw",
+        "custom_block_RAGLwp",
+        "custom_block_bcHX3D",
+        "custom_block_w3rDGL",
+        "custom_block_EewhUj"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "History of Durex"
+      }
+    },
+    "history_of_d_FmtbdW": {
+      "type": "history-of-d",
+      "blocks": {
+        "custom_block_QCTz3C": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004846_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002347.png",
+            "dashed_line_img": "shopify:\/\/shop_images\/Line_42.png",
+            "vertical_line_img": "shopify:\/\/shop_images\/Rectangle_3358.png"
+          }
+        },
+        "custom_block_T7FN4E": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004846.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002348.png",
+            "dashed_line_img": "shopify:\/\/shop_images\/Line_42.png",
+            "vertical_line_img": "shopify:\/\/shop_images\/Rectangle_3358.png"
+          }
+        },
+        "custom_block_by7y3h": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002349.png",
+            "dashed_line_img": "shopify:\/\/shop_images\/Line_42.png",
+            "vertical_line_img": "shopify:\/\/shop_images\/Rectangle_3358.png"
+          }
+        },
+        "custom_block_WhHkir": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004846_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002350.png",
+            "dashed_line_img": "shopify:\/\/shop_images\/Line_42.png",
+            "vertical_line_img": "shopify:\/\/shop_images\/Rectangle_3358.png"
+          }
+        },
+        "custom_block_TRFfnh": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845_2.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002351.png",
+            "dashed_line_img": "shopify:\/\/shop_images\/Line_42.png",
+            "vertical_line_img": "shopify:\/\/shop_images\/Rectangle_3358.png"
+          }
+        },
+        "custom_block_gpn7VH": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004846_2.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002352.png",
+            "dashed_line_img": "shopify:\/\/shop_images\/Line_42.png",
+            "vertical_line_img": "shopify:\/\/shop_images\/Rectangle_3358.png"
+          }
+        },
+        "custom_block_FfcN6z": {
+          "type": "custom-block",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_1000004845_3.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_1000002353.png",
+            "dashed_line_img": "shopify:\/\/shop_images\/Line_42.png",
+            "vertical_line_img": "shopify:\/\/shop_images\/Rectangle_3358.png"
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_QCTz3C",
+        "custom_block_T7FN4E",
+        "custom_block_by7y3h",
+        "custom_block_WhHkir",
+        "custom_block_TRFfnh",
+        "custom_block_gpn7VH",
+        "custom_block_FfcN6z"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "History of Durex"
+      }
+    },
+    "custom_testimonials_AgGHx9": {
+      "type": "custom-testimonials",
+      "blocks": {
+        "slide_UyCBWd": {
+          "type": "slide",
+          "settings": {
+            "active_card_bg_color": "#ffffff",
+            "card_bg_color": "#f2f2f2",
+            "testimonial_text": "<p>my testimonials<\/p>",
+            "author_image": "shopify:\/\/shop_images\/3_8d5c7278-5751-419a-a3d5-f525bc6291ed.webp",
+            "author_name": "John Doe",
+            "author_title": "CEO",
+            "main_image": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg"
+          }
+        },
+        "slide_GULVL9": {
+          "type": "slide",
+          "settings": {
+            "active_card_bg_color": "#f6ffc2",
+            "card_bg_color": "#f2f2f2",
+            "testimonial_text": "<p>“ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque  “<\/p>",
+            "author_image": "shopify:\/\/shop_images\/Rectangle_8_1.png",
+            "author_name": "Mr. John Doe",
+            "author_title": "Clients",
+            "main_image": "shopify:\/\/shop_images\/Rectangle_14.png"
+          }
+        },
+        "slide_ike8kh": {
+          "type": "slide",
+          "settings": {
+            "active_card_bg_color": "#f6ffc2",
+            "card_bg_color": "#ffffff",
+            "testimonial_text": "<p>“ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque  “<\/p>",
+            "author_image": "shopify:\/\/shop_images\/Rectangle_8.png",
+            "author_name": "Mr. John Doe",
+            "author_title": "Clients",
+            "main_image": "shopify:\/\/shop_images\/pexels-jane-trang-doan-1092730_fed4520c-eea3-4c9d-9e2f-63f90fa1d694.jpg"
+          }
+        },
+        "slide_qgid6W": {
+          "type": "slide",
+          "settings": {
+            "active_card_bg_color": "#f6ffc2",
+            "card_bg_color": "#f2f2f2",
+            "testimonial_text": "<p>“ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque  “<\/p>",
+            "author_image": "shopify:\/\/shop_images\/Rectangle_8_1.png",
+            "author_name": "Mr. John Doe",
+            "author_title": "Clients",
+            "main_image": "shopify:\/\/shop_images\/Rectangle_14.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_UyCBWd",
+        "slide_GULVL9",
+        "slide_ike8kh",
+        "slide_qgid6W"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Testimonials",
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+        "section_background": "rgba(0,0,0,0)",
+        "active_slide_color": "#f6ffc2",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "custom_email_subscription_LmeRTx": {
+      "type": "custom-email-subscription",
+      "disabled": true,
+      "settings": {
+        "heading": "Subscribe To Our Newsletter",
+        "section_background": "#edff84",
+        "button_label": "Subscribe",
+        "button_link": "",
+        "padding_top": 40,
+        "padding_bottom": 90
+      }
+    },
+    "shop_the_look_QX6F9N": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_GhwEjj": {
+          "type": "product",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/image_3.png",
+            "primary_left_position": 25,
+            "primary_top_position": 6,
+            "primary_product": "snow-goggles",
+            "secondary_left_position": 20,
+            "secondary_top_position": 15,
+            "secondary_product": "mens-ski-jacket",
+            "third_left_position": 40,
+            "third_top_position": 26,
+            "third_product": "ski-boots",
+            "fourth_left_position": 48,
+            "fourth_top_position": 23,
+            "fourth_product": "snowboard"
+          }
+        }
+      },
+      "block_order": [
+        "product_GhwEjj"
+      ],
+      "settings": {
+        "section_title": "Shop the Look",
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    }
+  },
+  "order": [
+    "main",
+    "history_of_durex_Ez9Bq8",
+    "history_of_d_FmtbdW",
+    "custom_testimonials_AgGHx9",
+    "custom_email_subscription_LmeRTx",
+    "shop_the_look_QX6F9N"
+  ]
+}
