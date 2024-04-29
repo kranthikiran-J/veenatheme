@@ -780,7 +780,7 @@
       "type": "tutorial-featured-collection",
       "settings": {
         "heading": "Heading",
-        "collection": "",
+        "collection": "featured-collections",
         "show_view_all": true
       }
     }
