@@ -81,7 +81,9 @@
       {{ product.vendor }}
     </div>
     <div class="custom-product-card--title">
-      {{ card_product_variant.title }}
+      <a href="{{ product.url }}">
+        {{ card_product_variant.title }}
+      </a>
     </div>
     <div class="custom-product-card--price-container">
       <span class="custom-product-card--price"> {{ card_product_variant.price | money_with_currency }}</span>
