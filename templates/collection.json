@@ -1,5 +1,14 @@
 {
   "sections": {
+    "custom_liquid_cjcbzp": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{%- render 'breadcrumbs' -%}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -30,6 +39,7 @@
     }
   },
   "order": [
+    "custom_liquid_cjcbzp",
     "banner",
     "product-grid"
   ]

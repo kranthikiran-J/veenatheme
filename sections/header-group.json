@@ -2,15 +2,6 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "custom_liquid_cRaHzC": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{%- render 'breadcrumbs' -%}",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
@@ -76,7 +67,6 @@
     }
   },
   "order": [
-    "custom_liquid_cRaHzC",
     "announcement-bar",
     "header",
     "custom_slideshow_BwhGzB"
